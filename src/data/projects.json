@@ -1,0 +1,112 @@
+[
+  {
+    "id": 2,
+    "title": "Project 4.0",
+    "description": "CTF-challenges ontwikkelen voor Evenement",
+    "longDescription": "Een volledig uitgewerkt backend systeem voor het beheren van MotoGP-gerelateerde data. De API beheert racers, teams en sponsors, terwijl React als frontend zorgt voor een vlotte gebruikerservaring.",
+    "image": "/assets/project-4.png",
+    "tags": [
+      "Docker",
+      ".NET 8.0",
+      "ASPCORE",
+      "React"
+    ],
+    "tagColors": [
+      "teal",
+      "purple",
+      "purple",
+      "blue"
+    ],
+    "link": "https://github.com/brentpaessens",
+    "github": "https://github.com/brentpaessens",
+    "status": "Afgerond",
+    "date": "Maart 2024",
+    "role": "Full-Stack Developer",
+    "teamSize": "Solo project",
+    "features": [
+      "REST API gebouwd met ASP.NET Core voor racer- en teambeheer",
+      "React frontend met dynamische lijsten en detailpaginas",
+      "Entity Framework voor database-interacties",
+      "Sponsor-koppeling per team met overzichtspagina"
+    ],
+    "techStack": [
+      "React",
+      "ASP.NET Core",
+      ".NET 8.0",
+      "Entity Framework",
+      "SQL Server"
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Cloud AI - Bralma",
+    "description": "AI model development met data analyse en pattern recognition",
+    "longDescription": "Een geavanceerd AI model gebouwd voor het voorspellen van elektriciteitsvraag in Engeland/Wales. Dit model combineert machine learning-technieken om betere beslissingen te nemen.",
+    "image": "/assets/cloud-ai.png",
+    "tags": [
+      "Python",
+      "TensorFlow",
+      "Pandas"
+    ],
+    "tagColors": [
+      "teal",
+      "coral",
+      "teal"
+    ],
+    "link": "https://github.com/brentpaessens",
+    "github": "https://github.com/brentpaessens",
+    "status": "Afgerond",
+    "date": "October 2024",
+    "role": "Solo Engineer",
+    "teamSize": "Solo project",
+    "features": [
+      "Data processing: importeren en verwerken van historische data met behulp van Pandas",
+      "EDA-visualisaties: grafieken en statistische analyses om het data beter te begrijpen",
+      "Predictive modeling: gebruik van machine learning modellen om de vraag accuraat te voorspellen",
+      "Cloud AI-deployment: model getest in een AI-cloud omgeving met een eenvoudige UI"
+    ],
+    "techStack": [
+      "Python",
+      "TensorFlow",
+      "Pandas",
+      "Scikit-Learn",
+      "Matplotlib"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Waste sorter - .NET Project",
+    "description": "Een app om afval detectie te doen aan de hand van image classification en MAUI gebruikt als frontend",
+    "longDescription": "Een slimme afvalsorteringsapp die gebruik maakt van image classification om afval automatisch te categoriseren. MAUI wordt gebruikt als cross-platform frontend.",
+    "image": "/projects/waste-sorter.png",
+    "tags": [
+      ".NET 8.0",
+      "ASPCORE",
+      "MAUI"
+    ],
+    "tagColors": [
+      "purple",
+      "purple",
+      "green"
+    ],
+    "link": "https://github.com/brentpaessens",
+    "github": "https://github.com/brentpaessens",
+    "status": "Afgerond",
+    "date": "Juni 2024",
+    "role": "Full-Stack Developer",
+    "teamSize": "Solo project",
+    "features": [
+      "Image classification model getraind om afvalcategorieen te herkennen",
+      "MAUI cross-platform frontend voor Android en Windows",
+      "ASP.NET Core backend API voor modelinferencing",
+      "Real-time feedback aan de gebruiker na foto-upload"
+    ],
+    "techStack": [
+      ".NET 8.0",
+      "ASP.NET Core",
+      "MAUI",
+      "ML.NET",
+      "SQLite"
+    ]
+  }
+]
