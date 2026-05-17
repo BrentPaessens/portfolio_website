@@ -124,7 +124,7 @@ export default function OverMijPage() {
                             </div>
 
                             <a
-                                href="/cv.pdf"
+                                href="/CV.pdf"
                                 download
                                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white transition-opacity hover:opacity-90"
                                 style={{ background: '#4DD9C0' }}
