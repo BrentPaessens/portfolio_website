@@ -185,25 +185,31 @@ export default async function ProjectDetailPage({ params }: Props) {
                         </div>
 
                         {/* CTA buttons */}
-                        <div className="flex flex-col gap-3">
-                            <a
-                                href={project.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-full py-3 rounded-full text-center text-sm font-semibold text-white transition-opacity hover:opacity-90"
-                                style={{ background: '#4DD9C0' }}
-                            >
-                                Bekijk Demo
-                            </a>
-                            <a
-                                href={project.github}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-full py-3 rounded-full text-center text-sm font-semibold border-2 border-gray-200 text-gray-700 hover:border-[#4DD9C0] hover:text-[#4DD9C0] transition-colors"
-                            >
-                                Github Repository
-                            </a>
-                        </div>
+                        {(project.link || project.github) && (
+                            <div className="flex flex-col gap-3">
+                                {project.link && (
+                                    <a
+                                        href={project.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-full py-3 rounded-full text-center text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                                        style={{ background: '#4DD9C0' }}
+                                    >
+                                        Bekijk Demo
+                                    </a>
+                                )}
+                                {project.github && (
+                                    <a
+                                        href={project.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-full py-3 rounded-full text-center text-sm font-semibold border-2 border-gray-200 text-gray-700 hover:border-[#4DD9C0] hover:text-[#4DD9C0] transition-colors"
+                                    >
+                                        Github Repository
+                                    </a>
+                                )}
+                            </div>
+                        )}
 
                     </div>
                 </div>
