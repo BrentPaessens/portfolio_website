@@ -38,8 +38,8 @@
   {
     "id": 2,
     "title": "Project 4.0",
-    "description": "CTF-challenges ontwikkelen voor Evenement",
-    "longDescription": "Een volledig uitgewerkt backend systeem voor het beheren van MotoGP-gerelateerde data. De API beheert racers, teams en sponsors, terwijl React als frontend zorgt voor een vlotte gebruikerservaring.",
+    "description": "CTF-challenges ontwikkelen voor Bsides Limburg 2026",
+    "longDescription": "Een volledig uitgewerkte C# backend, met een sql database  waarin alles wordt bijgehouden van gebruikers gegevens en een React frontend voor de website viueel op te bouwen.",
     "image": "/assets/project-4.png",
     "tags": [
       "Docker",
@@ -53,15 +53,13 @@
       "purple",
       "blue"
     ],
-    "link": "https://github.com/brentpaessens",
-    "github": "https://github.com/brentpaessens",
     "status": "Afgerond",
-    "date": "Maart 2024",
+    "date": "Januari 2026",
     "role": "Full-Stack Developer",
-    "teamSize": "Solo project",
+    "teamSize": "Team project",
     "features": [
-      "REST API gebouwd met ASP.NET Core voor racer- en teambeheer",
-      "React frontend met dynamische lijsten en detailpaginas",
+      "REST API gebouwd met ASP.NET Core voor om endpoints te beheren en data op te slaan in SQL Server",
+      "Volledige uitgewerkteReact frontend",
       "Entity Framework voor database-interacties",
       "Sponsor-koppeling per team met overzichtspagina"
     ],
