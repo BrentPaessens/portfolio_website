@@ -9,35 +9,35 @@ export const metadata: Metadata = {
 /* ─── Data ─────────────────────────────────────────────── */
 
 const STATS = [
-    { value: '3+',  label: 'jaar ervaring' },
-    { value: '10+', label: 'Projecten afgerond' },
+    { value: '0',  label: 'jaar ervaring' },
+    { value: '9', label: 'Projecten afgerond' },
     { value: '5+',  label: 'Technologieën' },
-    { value: '8',   label: 'Bijdragen' },
+    { value: '4',   label: 'Bijdragen' },
 ];
 
 const SKILLS = [
     {
         category: 'Frontend',
         icon: '🖥️',
-        tags: ['React', 'VueJS', 'HTML/CSS', 'Nuxt', 'TailwindCSS'],
+        tags: ['React', 'VueJS', 'HTML/CSS', 'Laravel', 'TailwindCSS'],
         color: '#4DD9C0',
     },
     {
         category: 'Backend',
         icon: '⚙️',
-        tags: ['NodeJS', 'C#', '.NET', 'Python'],
+        tags: ['C#', '.NET', 'Python', 'Java', 'JavaScript'],
         color: '#4DD9C0',
     },
     {
         category: 'AI/ML',
         icon: '🤖',
-        tags: ['Python', 'TensorFlow', 'PyTorch', 'Pandas'],
+        tags: ['Python', 'TensorFlow', 'PyTorch', 'Pandas', 'FastAPI'],
         color: '#FF7F65',
     },
     {
         category: 'Database',
         icon: '🗄️',
-        tags: ['MySQL', 'MongoDB', 'SQL Server'],
+        tags: ['MySQL', 'MongoDB', 'SQL Server', 'PostgreSQL'],
         color: '#4DD9C0',
     },
 ];
@@ -47,15 +47,15 @@ const PASSIONS = [
         title: 'Mountainbiken',
         icon: '🚵',
         description:
-            'In mijn vrije tijd ben ik graag mountainbiken. Het biedt mij de perfecte balans tussen buiten zijn en kilometers later kom je thuis als herboren.',
+            'In mijn vrije tijd doe ik aan mountainbiken. Het biedt mij de perfecte balans tussen buiten zijn en kilometers later kom je thuis als herboren.',
         tags: ['Natuur', 'Avontuur'],
     },
     {
         title: 'Server Administrator',
         icon: '🖧',
         description:
-            'Ik beheer thuis een eigen server omgeving. Dit houdt mij technisch scherp en ik leer hierin effectieve, schaalbare en betrouwbare IT-infrastructuur op te zetten.',
-        tags: ['Proxmox', 'Homelab'],
+            'Naast programmeren ben ik ook actief als medewerker van een Minecraft server, waar ik reports behandel en onderzoek of iemand de regels overtreedt van de server. ',
+        tags: ['Minecraft', 'Server Admin'],
     },
 ];
 
@@ -105,7 +105,7 @@ export default function OverMijPage() {
                             </div>
                             <div className="text-center">
                                 <p className="font-bold text-gray-900 text-lg">Brent Paessens</p>
-                                <p className="text-sm text-gray-500">Full-Stack developer &amp; ML Engineer</p>
+                                <p className="text-sm text-gray-500">Software Developer &amp; AI Engineer</p>
                             </div>
                         </div>
 
@@ -123,17 +123,41 @@ export default function OverMijPage() {
                                 ))}
                             </div>
 
-                            <a
-                                href="/CV.pdf"
-                                download
-                                className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white transition-opacity hover:opacity-90"
-                                style={{ background: '#4DD9C0' }}
-                            >
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                                    <path d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
-                                </svg>
-                                Download CV
-                            </a>
+                            <div className="flex flex-wrap gap-3">
+                                <a
+                                    href="/CV.pdf"
+                                    download
+                                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                                    style={{ background: '#4DD9C0' }}
+                                >
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                        <path d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+                                    </svg>
+                                    Download CV
+                                </a>
+                                <a
+                                    href="/CV.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all border-2"
+                                    style={{ borderColor: '#4DD9C0', color: '#4DD9C0', background: 'transparent' }}
+                                >
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                        <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    Bekijk CV
+                                </a>
+                                <a
+                                    href="/"
+                                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all border-2"
+                                    style={{ borderColor: '#FF7F65', color: '#FF7F65', background: 'transparent' }}
+                                >
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                        <path d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                                    </svg>
+                                    Terug naar Portfolio
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

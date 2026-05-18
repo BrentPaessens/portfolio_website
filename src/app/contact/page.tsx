@@ -40,7 +40,7 @@ const CONTACT_ITEMS = [
             </svg>
         ),
         label: 'Locatie',
-        value: 'Zelem, Belgium',
+        value: 'Flanders, Belgium',
         href: 'https://maps.google.com/?q=Zelem,Belgium',
         cta: 'Bekijk op kaart →',
     },

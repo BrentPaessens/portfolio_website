@@ -1,5 +1,24 @@
 [
   {
+    "id": 4,
+    "title": "HomeAssistant IoT project",
+    "description": "Raspberry Pi met HomeAssistant om digitale meter uit te lezen en hiervan real-time verbruik, productie en uw piek verbruik per kwartier.",
+    "longDescription": "Een raspberry Pi 5 met HomeAssistant geïnstalleerd en geconfigureerd om data van een digitale meter uit te lezen. De setup biedt real-time inzicht in energieverbruik, productie en piekverbruik per kwartier. Houd ook deze gegevens voor 1 jaar bij.",
+    "image": "/assets/project-5.png",
+    "tags": [
+      "IoT",
+      "Open Source",
+      "HomeAssistant",
+      "Raspberry Pi"
+    ],
+    "tagColors": [
+      "teal",
+      "purple",
+      "purple",
+      "blue"
+    ]
+  },
+  {
     "id": 2,
     "title": "Project 4.0",
     "description": "CTF-challenges ontwikkelen voor Evenement",
