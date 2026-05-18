@@ -16,6 +16,25 @@
       "purple",
       "purple",
       "blue"
+    ],
+    "link": "https://github.com/brentpaessens",
+    "github": "https://github.com/brentpaessens",
+    "status": "Afgerond",
+    "date": "November 2024",
+    "role": "IoT Developer",
+    "teamSize": "Solo project",
+    "features": [
+      "Real-time data reading van digitale meter met MQTT",
+      "Automatische gegevensopslag gedurende 1 jaar voor analyse",
+      "Dashboard met realtime verbruik, productie en piekverbruik per kwartier",
+      "Home Assistant integratie met custom sensors en automations"
+    ],
+    "techStack": [
+      "Raspberry Pi 5",
+      "Home Assistant",
+      "MQTT",
+      "Python",
+      "SQLite"
     ]
   },
   {
