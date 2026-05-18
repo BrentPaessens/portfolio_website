@@ -75,7 +75,7 @@
     "id": 1,
     "title": "Cloud AI - Bralma",
     "description": "AI model development met data analyse en pattern recognition",
-    "longDescription": "Een geavanceerd AI model gebouwd voor het voorspellen van elektriciteitsvraag in Engeland/Wales. Dit model combineert machine learning-technieken om betere beslissingen te nemen.",
+    "longDescription": "Dit project onderzoekt hoe ik twee grote publieke datasets, de historische elektriciteitsvraag van het VK en de UK Housing Price Paid-dataset, kunnen omzetten in betrouwbare input voor AI-modellen.Ik bouwde een volledige machine-learning pipeline die begint bij ruwe data, en eindigt bij een voorspellend model dat in de cloud draait.Het doel was om niet alleen een goed model te bouwen, maar vooral om te tonen dat ik kritisch kan denken, patronen kan ontdekken en een werkende Cloud-AI-implementatie kan opleveren.",
     "image": "/assets/cloud-ai.png",
     "tags": [
       "Python",
@@ -94,10 +94,11 @@
     "role": "Solo Engineer",
     "teamSize": "Solo project",
     "features": [
-      "Data processing: importeren en verwerken van historische data met behulp van Pandas",
-      "EDA-visualisaties: grafieken en statistische analyses om het data beter te begrijpen",
-      "Predictive modeling: gebruik van machine learning modellen om de vraag accuraat te voorspellen",
-      "Cloud AI-deployment: model getest in een AI-cloud omgeving met een eenvoudige UI"
+      "Volledige datacleaning: inconsistenties in datums, ontbrekende waarden, negatieve waarden en outliers opgeschoond met meerdere technieken.",
+      "EDA-visualisaties: boxplots en correlatie-analyses om trends te begrijpen.",
+      "Predictiemodellen: meerdere ML-modellen getraind en vergeleken (PyCaret, AWS-model).",
+      "Cloud AI deployment: model gehost in de cloud met een backend-API en een eenvoudige frontend voor voorspellingen.",
+      "Automatische pipeline: model wordt opnieuw getraind bij nieuwe data via CI/CD dit is ingebouwd op het hosting platform."
     ],
     "techStack": [
       "Python",
