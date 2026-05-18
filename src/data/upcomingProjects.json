@@ -1,0 +1,18 @@
+[
+  {
+    "id": 5,
+    "title": "AI Home Chatbot",
+    "description": "",
+    "image": "",
+    "tags": [
+      "Python",
+      "OpenAI"
+    ],
+    "tagColors": [
+      "teal",
+      "purple"
+    ],
+    "status": "In voorbereiding",
+    "startDate": "Juli 2026"
+  }
+]
