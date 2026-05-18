@@ -2,8 +2,7 @@
   {
     "id": 5,
     "title": "AI Home Chatbot",
-    "description": "",
-    "image": "",
+    "description": "Een AI-gestuurde chatbot voor thuisgebruik.",
     "tags": [
       "Python",
       "OpenAI"
