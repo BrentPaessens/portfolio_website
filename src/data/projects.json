@@ -3,7 +3,7 @@
     "id": 4,
     "title": "HomeAssistant IoT project",
     "description": "Raspberry Pi met HomeAssistant om digitale meter uit te lezen en hiervan real-time verbruik, productie en uw piek verbruik per kwartier.",
-    "longDescription": "Een raspberry Pi 5 met HomeAssistant geïnstalleerd en geconfigureerd om data van een digitale meter uit te lezen. De setup biedt real-time inzicht in energieverbruik, productie en piekverbruik per kwartier. Houd ook deze gegevens voor 1 jaar bij.",
+    "longDescription": "Een raspberry Pi 5 met HomeAssistant geïnstalleerd en geconfigureerd om data van een digitale meter uit te lezen. De setup biedt real-time inzicht in energieverbruik, productie en piekverbruik per kwartier. Houd ook deze gegevens voor 1 jaar bij. daarna wordt dit als csv opgeslagen als jaarverslag.",
     "image": "/assets/project-5.png",
     "tags": [
       "IoT",
@@ -18,21 +18,21 @@
       "blue"
     ],
     "status": "Afgerond",
-    "date": "November 2024",
+    "date": "Februari 2026",
     "role": "IoT Developer",
     "teamSize": "Solo project",
     "features": [
-      "Real-time data reading van digitale meter met MQTT",
+      "Real-time data lezen van digitale meter",
       "Automatische gegevensopslag gedurende 1 jaar voor analyse",
       "Dashboard met realtime verbruik, productie en piekverbruik per kwartier",
-      "Home Assistant integratie met custom sensors en automations"
+      "Dashbaord pagina met 24u grafiek van verbuik en productie",
+      "Home Assistant Wifi integratie om via mobile app toegang te hebben tot dashboard en data"
     ],
     "techStack": [
       "Raspberry Pi 5",
       "Home Assistant",
-      "MQTT",
-      "Python",
-      "SQLite"
+      "IoT",
+      "Python"
     ]
   },
   {
