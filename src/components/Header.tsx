@@ -2,18 +2,23 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-
-const NAV_LINKS = [
-    { label: 'Home',       href: '/' },
-    { label: 'Over Mij',   href: '/over-mij' },
-    { label: 'Stage',      href: '/stage' },
-    { label: 'Contact',    href: '/contact' },
-];
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../i18n/translations';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Header: React.FC = () => {
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
     const pathname = usePathname();
+    const { language } = useLanguage();
+    const t = translations[language];
+
+    const NAV_LINKS = [
+        { label: t.nav.home,      href: '/' },
+        { label: t.nav.about,     href: '/over-mij' },
+        { label: t.nav.stage,     href: '/stage' },
+        { label: t.nav.contact,   href: '/contact' },
+    ];
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 20);
@@ -35,24 +40,27 @@ const Header: React.FC = () => {
                 </Link>
 
                 {/* Desktop nav */}
-                <ul className="hidden md:flex items-center space-x-8">
-                    {NAV_LINKS.map(({ label, href }) => {
-                        const active = pathname === href || (href !== '/' && pathname.startsWith(href));
-                        return (
-                            <li key={label}>
-                                <Link
-                                    href={href}
-                                    className={`text-sm font-medium transition-colors ${
-                                        active ? 'font-semibold' : 'text-gray-700 hover:text-[#4DD9C0]'
-                                    }`}
-                                    style={active ? { color: '#4DD9C0' } : {}}
-                                >
-                                    {label}
-                                </Link>
-                            </li>
-                        );
-                    })}
-                </ul>
+                <div className="hidden md:flex items-center space-x-8">
+                    <ul className="flex items-center space-x-8">
+                        {NAV_LINKS.map(({ label, href }) => {
+                            const active = pathname === href || (href !== '/' && pathname.startsWith(href));
+                            return (
+                                <li key={label}>
+                                    <Link
+                                        href={href}
+                                        className={`text-sm font-medium transition-colors ${
+                                            active ? 'font-semibold' : 'text-gray-700 hover:text-[#4DD9C0]'
+                                        }`}
+                                        style={active ? { color: '#4DD9C0' } : {}}
+                                    >
+                                        {label}
+                                    </Link>
+                                </li>
+                            );
+                        })}
+                    </ul>
+                    <LanguageSwitcher />
+                </div>
 
                 {/* Mobile hamburger */}
                 <button
@@ -79,6 +87,9 @@ const Header: React.FC = () => {
                             {label}
                         </Link>
                     ))}
+                    <div className="border-t border-gray-100 pt-4 mt-4">
+                        <LanguageSwitcher />
+                    </div>
                 </div>
             )}
         </header>

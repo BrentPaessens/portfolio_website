@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import ScrollToTop from '../components/ScrollToTop';
+import { LanguageProvider } from '../context/LanguageContext';
 import './globals.css';
 import type { Metadata } from 'next';
 
@@ -13,9 +15,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
         <html lang="nl">
             <body className="flex flex-col min-h-screen">
-                <Header />
-                <main className="flex-grow">{children}</main>
-                <Footer />
+                <LanguageProvider>
+                    <Header />
+                    <main className="flex-grow">{children}</main>
+                    <Footer />
+                    <ScrollToTop />
+                </LanguageProvider>
             </body>
         </html>
     );

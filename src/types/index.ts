@@ -4,6 +4,7 @@ export interface Project {
   description: string;
   longDescription: string;
   image: string;
+  gallery?: string[];
   tags: string[];
   tagColors: string[];
   link: string;
@@ -14,6 +15,7 @@ export interface Project {
   teamSize: string;
   features: string[];
   techStack: string[];
+  specifics?: string[];
 }
 
 export interface ContactFormData {

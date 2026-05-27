@@ -1,15 +1,20 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
-
-const NAV_LINKS = [
-    { label: 'Home',      href: '/' },
-    { label: 'Over Mij',  href: '/over-mij' },
-    { label: 'Contact',   href: '/contact' },
-];
-
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../i18n/translations';
 
 const Footer: React.FC = () => {
+    const { language } = useLanguage();
+    const t = translations[language];
     const year = new Date().getFullYear();
+
+    const NAV_LINKS = [
+        { label: t.nav.home,      href: '/' },
+        { label: t.nav.about,     href: '/over-mij' },
+        { label: t.nav.contact,   href: '/contact' },
+    ];
 
     return (
         <footer style={{ background: '#1E2235' }} className="text-white pt-16 pb-6">
@@ -20,10 +25,10 @@ const Footer: React.FC = () => {
                     <div className="md:col-span-1">
                         <Link href="/" className="mb-3 block">
                             <p className="text-base font-bold text-white">Brent Paessens</p>
-                            <p className="text-sm font-semibold" style={{ color: '#4DD9C0' }}>Portfolio</p>
+                            <p className="text-sm font-semibold" style={{ color: '#4DD9C0' }}>{t.footer.branding}</p>
                         </Link>
                         <p className="text-sm text-white/50 leading-relaxed max-w-xs">
-                            Developer in opleiding met een passie voor AI, .NET en moderne webapplicaties.
+                            {t.footer.bio}
                         </p>
                         {/* Accent line */}
                         <div className="mt-5 w-10 h-1 rounded-full" style={{ background: '#4DD9C0' }} />
@@ -31,7 +36,7 @@ const Footer: React.FC = () => {
 
                     {/* Col 2 – Navigatie */}
                     <div>
-                        <h4 className="text-sm font-bold uppercase tracking-widest text-white/70 mb-4">Navigatie</h4>
+                        <h4 className="text-sm font-bold uppercase tracking-widest text-white/70 mb-4">{t.footer.navigation}</h4>
                         <ul className="space-y-3">
                             {NAV_LINKS.map(({ label, href }) => (
                                 <li key={label}>
@@ -48,7 +53,7 @@ const Footer: React.FC = () => {
 
                     {/* Col 3 – Sociaal */}
                     <div>
-                        <h4 className="text-sm font-bold uppercase tracking-widest text-white/70 mb-4">Sociaal</h4>
+                        <h4 className="text-sm font-bold uppercase tracking-widest text-white/70 mb-4">{t.footer.social}</h4>
                         <ul className="space-y-3">
                             <li>
                                 <a href="https://www.linkedin.com/in/brent-paessens/" target="_blank" rel="noopener noreferrer"
@@ -85,35 +90,30 @@ const Footer: React.FC = () => {
 
                     {/* Col 4 – Contact */}
                     <div>
-                        <h4 className="text-sm font-bold uppercase tracking-widest text-white/70 mb-4">Contact</h4>
+                        <h4 className="text-sm font-bold uppercase tracking-widest text-white/70 mb-4">{t.footer.contact}</h4>
                         <ul className="space-y-3">
                             <li className="flex items-start gap-2 text-sm text-white/60">
                                 <svg className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: '#4DD9C0' }} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                                     <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                                 </svg>
-                                brentpaessens@gmail.com
+                                {t.footer.email}
                             </li>
                             <li className="flex items-start gap-2 text-sm text-white/60">
                                 <svg className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: '#4DD9C0' }} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                                     <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                                     <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                                 </svg>
-                                Zelem, Vlaanderen, België
+                                {t.footer.location}
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                {/* Bottom bar */}
-                <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-2">
-                    <p className="text-xs text-white/30">
-                        © {year} Portfolio Website Gemaakt Door. Alle rechten voorbehouden.
+                {/* Bottom */}
+                <div className="text-center py-8">
+                    <p className="text-sm text-white/40">
+                        © {year} Brent Paessens. All rights reserved.
                     </p>
-                    <div className="flex items-center gap-1">
-                        <span className="text-xs text-white/30">Made with</span>
-                        <span style={{ color: '#FF7F65' }}>♥</span>
-                        <span className="text-xs text-white/30">in België</span>
-                    </div>
                 </div>
             </div>
         </footer>

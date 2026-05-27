@@ -1,8 +1,20 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../i18n/translations';
 
 const Hero: React.FC = () => {
+    const { language } = useLanguage();
+    const t = translations[language];
+
+    const handleScrollToProjects = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        const element = document.querySelector('#projecten');
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
     return (
         <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-white">
             {/* Decorative blobs */}
@@ -20,25 +32,26 @@ const Hero: React.FC = () => {
                     {/* Text */}
                     <div className="flex-1">
                         <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
-                            Welkom bij mijn<br />portfolio
+                            {t.hero.welcome}<br />{t.hero.portfolio}
                         </h1>
-                        <p className="text-lg text-gray-500 font-medium mb-2">Ontdek mijn werk en passie</p>
+                        <p className="text-lg text-gray-500 font-medium mb-2">{t.hero.subtitle}</p>
                         <p className="text-gray-400 mb-8 max-w-md">
-                            Een verzameling van projecten en ervaringen uit mijn reis als developer
+                            {t.hero.description}
                         </p>
                         <div className="flex gap-4 flex-wrap">
                             <a
                                 href="#projecten"
-                                className="px-6 py-3 rounded-full font-semibold text-sm text-white transition-opacity hover:opacity-90"
+                                onClick={handleScrollToProjects}
+                                className="px-8 py-4 rounded-full font-bold text-base text-white transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:-translate-y-1 shadow-lg cursor-pointer"
                                 style={{ background: '#4DD9C0' }}
                             >
-                                Mijn werk
+                                {t.hero.myWork}
                             </a>
                             <Link
                                 href="/over-mij"
                                 className="px-6 py-3 rounded-full font-semibold text-sm text-gray-800 border-2 border-gray-200 hover:border-[#4DD9C0] transition-colors"
                             >
-                                Over mij
+                                {t.hero.aboutMe}
                             </Link>
                         </div>
                     </div>

@@ -2,9 +2,14 @@
   {
     "id": 4,
     "title": "HomeAssistant IoT project",
-    "description": "Raspberry Pi met HomeAssistant om digitale meter uit te lezen en hiervan real-time verbruik, productie en uw piek verbruik per kwartier.",
+    "description": "Raspberry Pi met HomeAssistant om digitale meter uit te lezen en hiervan real-time verbruik, productie en uw piek verbruik per kwartier te visualiseren.",
     "longDescription": "Een raspberry Pi 5 met HomeAssistant geïnstalleerd en geconfigureerd om data van een digitale meter uit te lezen. De setup biedt real-time inzicht in energieverbruik, productie en piekverbruik per kwartier. Houd ook deze gegevens voor 1 jaar bij. daarna wordt dit als csv opgeslagen als jaarverslag.",
-    "image": "/assets/project-5.png",
+    "image": "/assets/HomeAssistant logo.png",
+    "gallery": [
+      "/assets/HomeAssistant-24hr.png",
+      "/assets/HomeAssistant-analytical.png",
+      "/assets/HomeAssistant-live-page.png"
+    ],
     "tags": [
       "IoT",
       "Open Source",
@@ -21,6 +26,14 @@
     "date": "Februari 2026",
     "role": "IoT Developer",
     "teamSize": "Solo project",
+    "specifics": [
+      "HomeAssistant installatie en configuratie op Raspberry Pi 5",
+      "DSMR integratie voor digitale meter uitlezing",
+      "Custom automations en scripts voor data verwerking",
+      "Grafana dashboards ontwerp voor real-time visualisatie",
+      "API configuratie voor mobiele app integratie",
+      "CSV export workflow voor jaarlijkse verslaggeving"
+    ],
     "features": [
       "Real-time data lezen van digitale meter",
       "Automatische gegevensopslag gedurende 1 jaar voor analyse",
@@ -39,7 +52,7 @@
     "id": 2,
     "title": "Project 4.0",
     "description": "CTF-challenges ontwikkelen voor Bsides Limburg 2026",
-    "longDescription": "Een volledig uitgewerkte C# backend, met een sql database  waarin alles wordt bijgehouden van gebruikers gegevens en een React frontend voor de website viueel op te bouwen.",
+    "longDescription": "Een volledig uitgewerkte C# backend, met een sql database  waarin alles wordt bijgehouden van gebruikers gegevens en een React frontend voor de website visueel op te bouwen.",
     "image": "/assets/project-4.png",
     "tags": [
       "Docker",

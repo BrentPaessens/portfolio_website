@@ -1,21 +1,21 @@
+'use client';
+
 import React from 'react';
-import type { Metadata } from 'next';
+import { useLanguage } from '../../context/LanguageContext';
+import { translations } from '../../i18n/translations';
 import { SectionCard } from '../../components/SectionCard';
 
-export const metadata: Metadata = {
-    title: 'Mijn Stage – Brent Paessens',
-    description: 'Het volledige verhaal van mijn ervaringen en prestaties tijdens mijn stageperiode.',
-};
-
 const StagePage = () => {
+    const { language } = useLanguage();
+    const t = translations[language];
     return (
         <div className="min-h-screen pt-28 pb-16 bg-gradient-to-br from-gray-50 to-white">
             {/* Header Section */}
             <div className="max-w-4xl mx-auto px-6 mb-16">
                 <div className="space-y-4">
-                    <h1 className="text-5xl font-bold text-gray-900">Mijn Stage</h1>
+                    <h1 className="text-5xl font-bold text-gray-900">{t.stage.title}</h1>
                     <p className="text-lg text-gray-600 max-w-2xl">
-                        Een gedetailleerd overzicht van alles wat ik heb bereikt, geleerd en meegemaakt tijdens deze periode.
+                        {t.stage.description}
                     </p>
                 </div>
             </div>
@@ -23,7 +23,7 @@ const StagePage = () => {
             {/* Main Content */}
             <div className="max-w-4xl mx-auto px-6">
                 {/* Introduction */}
-                <SectionCard icon="🎯" title="Inleiding">
+                <SectionCard icon="🎯" title={t.stage.introduction}>
                     <p>
                         Welkom op mijn Stage-pagina! Hier vertel ik het volledige verhaal van mijn ervaringen tijdens deze bijzondere periode. 
                         Van de eerste dag tot de laatste hebben talrijke momenten voorbijgegaan die me hebben gevormd als developer en persoon.
@@ -35,7 +35,7 @@ const StagePage = () => {
                 </SectionCard>
 
                 {/* My Journey */}
-                <SectionCard icon="🚀" title="Mijn Reis">
+                <SectionCard icon="🚀" title={t.stage.myJourney}>
                     <div className="space-y-6">
                         <div>
                             <h3 className="text-lg font-semibold text-[#4DD9C0] mb-2">Week 1-2: De Start</h3>
@@ -72,7 +72,7 @@ const StagePage = () => {
                 </SectionCard>
 
                 {/* Key Achievements */}
-                <SectionCard icon="⭐" title="Hoogtepunten & Prestaties">
+                <SectionCard icon="⭐" title={t.stage.keyAchievements}>
                     <div className="space-y-4">
                         <div className="border-l-4 border-[#4DD9C0] pl-4 py-3">
                             <h3 className="font-semibold text-gray-900 mb-1">Highlight 1: [Projecttitel]</h3>
@@ -105,7 +105,7 @@ const StagePage = () => {
                 </SectionCard>
 
                 {/* Lessons Learned */}
-                <SectionCard icon="💡" title="Geleerde Lessen">
+                <SectionCard icon="💡" title={t.stage.lessonsLearned}>
                     <div className="space-y-4">
                         <div>
                             <h3 className="font-semibold text-gray-900 mb-2">Technische Inzichten</h3>
@@ -137,7 +137,7 @@ const StagePage = () => {
                 </SectionCard>
 
                 {/* Challenges & Solutions */}
-                <SectionCard icon="🔧" title="Uitdagingen & Oplossingen">
+                <SectionCard icon="🔧" title={t.stage.challengesSolutions}>
                     <div className="space-y-4">
                         <p>
                             Niet alles verliep vlekkeloos – en dat is prima! Hier kun je beschrijven welke obstakels je tegenkwam en hoe je ze hebt aangepakt.

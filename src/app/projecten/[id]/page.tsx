@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import projects from '../../../data/projects.json';
 import { Project } from '../../../types';
+import { ImageCarousel } from '../../../components/ImageCarousel';
 
 const TAG_COLORS: Record<string, string> = {
     teal:   'bg-[#e6faf7] text-[#2aaa94]',
@@ -52,13 +53,6 @@ export default async function ProjectDetailPage({ params }: Props) {
                 </Link>
             </div>
 
-            {/* ── Breadcrumb / label ───────────────────────── */}
-            <div className="max-w-6xl mx-auto px-6 pb-6">
-                <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: '#4DD9C0' }}>
-                    Projects – detail page
-                </span>
-            </div>
-
             {/* ── Main grid ────────────────────────────────── */}
             <div className="max-w-6xl mx-auto px-6 pb-24">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
@@ -83,12 +77,12 @@ export default async function ProjectDetailPage({ params }: Props) {
                             <h1 className="text-3xl font-extrabold text-gray-900 mb-4">{project.title}</h1>
 
                             {/* Screenshot */}
-                            <div className="w-full rounded-2xl overflow-hidden border border-gray-100 shadow-sm bg-gray-50 h-64 md:h-80">
+                            <div className="w-full rounded-2xl overflow-hidden border border-gray-100 shadow-sm bg-gray-50 h-64 md:h-80 flex items-center justify-center">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
                                     src={project.image}
                                     alt={project.title}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-contain"
                                 />
                             </div>
                         </div>
@@ -98,6 +92,24 @@ export default async function ProjectDetailPage({ params }: Props) {
                             <h2 className="text-xl font-bold text-gray-900 mb-3">Over het project</h2>
                             <p className="text-sm text-gray-600 leading-relaxed">{project.longDescription}</p>
                         </div>
+
+                        {/* Wat heb ik specifiek gedaan */}
+                        {project.specifics && project.specifics.length > 0 && (
+                            <div>
+                                <h2 className="text-xl font-bold text-gray-900 mb-4">Wat heb ik specifiek gedaan</h2>
+                                <ul className="space-y-3">
+                                    {project.specifics.map((item, i) => (
+                                        <li key={i} className="flex items-start gap-3 text-sm text-gray-600">
+                                            <span
+                                                className="mt-1.5 w-2 h-2 rounded-full flex-shrink-0"
+                                                style={{ background: '#FF7F65' }}
+                                            />
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
 
                         {/* Belangrijkste features */}
                         <div>
@@ -132,10 +144,15 @@ export default async function ProjectDetailPage({ params }: Props) {
                             </div>
                         </div>
 
+                        {/* Galerij - Carousel */}
+                        {project.gallery && project.gallery.length > 0 && (
+                            <ImageCarousel images={project.gallery} title={project.title} />
+                        )}
+
                     </div>
 
                     {/* ── Right column (1/3) ──────────────── */}
-                    <div className="space-y-6">
+                    <div className="space-y-6 md:sticky md:top-24 md:h-fit">
 
                         {/* Project info card */}
                         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 space-y-5">
@@ -188,15 +205,13 @@ export default async function ProjectDetailPage({ params }: Props) {
                         {(project.link || project.github) && (
                             <div className="flex flex-col gap-3">
                                 {project.link && (
-                                    <a
-                                        href={project.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="w-full py-3 rounded-full text-center text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                                    <button
+                                        disabled
+                                        className="w-full py-3 rounded-full text-center text-sm font-semibold text-white transition-opacity opacity-50 cursor-not-allowed"
                                         style={{ background: '#4DD9C0' }}
                                     >
                                         Bekijk Demo
-                                    </a>
+                                    </button>
                                 )}
                                 {project.github && (
                                     <a

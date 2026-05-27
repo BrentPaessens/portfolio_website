@@ -1,41 +1,39 @@
-import React from 'react';
-import type { Metadata } from 'next';
+'use client';
 
-export const metadata: Metadata = {
-    title: 'Over Mij – Brent Paessens',
-    description: 'Student Applicatieontwikkeling met passie voor backend development en machine learning.',
-};
+import React from 'react';
+import { useLanguage } from '../../context/LanguageContext';
+import { translations } from '../../i18n/translations';
 
 /* ─── Data ─────────────────────────────────────────────── */
 
-const STATS = [
-    { value: '0',  label: 'jaar ervaring' },
-    { value: '9', label: 'Projecten afgerond' },
-    { value: '5+',  label: 'Technologieën' },
-    { value: '4',   label: 'Bijdragen' },
+const getSTATS = (t: any) => [
+    { value: '0',  label: t.aboutMe.yearsExperience },
+    { value: '9', label: t.aboutMe.projectsCompleted },
+    { value: '5+',  label: t.aboutMe.technologies },
+    { value: '4',   label: t.aboutMe.contributions },
 ];
 
-const SKILLS = [
+const getSKILLS = (t: any) => [
     {
-        category: 'Frontend',
+        category: t.aboutMe.frontend,
         icon: '🖥️',
         tags: ['React', 'VueJS', 'HTML/CSS', 'Laravel', 'TailwindCSS'],
         color: '#4DD9C0',
     },
     {
-        category: 'Backend',
+        category: t.aboutMe.backend,
         icon: '⚙️',
         tags: ['C#', '.NET', 'Python', 'Java', 'JavaScript'],
         color: '#4DD9C0',
     },
     {
-        category: 'AI/ML',
+        category: t.aboutMe.aiml,
         icon: '🤖',
         tags: ['Python', 'TensorFlow', 'PyTorch', 'Pandas', 'FastAPI'],
         color: '#FF7F65',
     },
     {
-        category: 'Database',
+        category: t.aboutMe.database,
         icon: '🗄️',
         tags: ['MySQL', 'MongoDB', 'SQL Server', 'PostgreSQL'],
         color: '#4DD9C0',
@@ -62,6 +60,10 @@ const PASSIONS = [
 /* ─── Page ───────────────────────────────────────────────── */
 
 export default function OverMijPage() {
+    const { language } = useLanguage();
+    const t = translations[language];
+    const STATS = getSTATS(t);
+    const SKILLS = getSKILLS(t);
     return (
         <div>
 
@@ -77,10 +79,9 @@ export default function OverMijPage() {
                     style={{ background: '#FF7F65', borderRadius: '40% 60% 30% 70% / 60% 40% 60% 40%' }}
                 />
                 <div className="max-w-6xl mx-auto px-6 text-center relative">
-                    <h1 className="text-5xl font-extrabold text-gray-900 mt-2 mb-4">Over mij</h1>
+                    <h1 className="text-5xl font-extrabold text-gray-900 mt-2 mb-4">{t.aboutMe.title}</h1>
                     <p className="text-lg text-gray-500 max-w-xl mx-auto">
-                        Student Applicatieontwikkeling met passie voor<br />
-                        backend development en machine learning
+                        {t.aboutMe.description}
                     </p>
                 </div>
             </section>
