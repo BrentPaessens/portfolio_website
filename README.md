@@ -51,9 +51,9 @@ To get a local copy up and running, follow these steps:
 ## Author
 
 Brent Paessens 
-[Your Website] https://portfoliobrent.netlify.app/  
-[Your LinkedIn] https://www.linkedin.com/in/brent-paessens/
-[Your GitHub] https://github.com/BrentPaessens
+https://portfoliobrent.netlify.app/  
+https://www.linkedin.com/in/brent-paessens/
+https://github.com/BrentPaessens
 
 ## License
 
