@@ -50,10 +50,10 @@ To get a local copy up and running, follow these steps:
 
 ## Author
 
-Your Name  
-[Your Website](https://yourwebsite.com)  
-[Your LinkedIn](https://linkedin.com/in/yourprofile)  
-[Your GitHub](https://github.com/yourusername)
+Brent Paessens 
+[Your Website] https://portfoliobrent.netlify.app/  
+[Your LinkedIn] https://www.linkedin.com/in/brent-paessens/
+[Your GitHub] https://github.com/BrentPaessens
 
 ## License
 
