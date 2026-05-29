@@ -180,7 +180,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                             </div>
 
                             <div>
-                                <p className="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Team</p>
+                                <p className="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Type project</p>
                                 <p className="text-sm text-gray-700">{project.teamSize}</p>
                             </div>
                         </div>

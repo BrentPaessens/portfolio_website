@@ -38,7 +38,7 @@
       "Real-time data lezen van digitale meter",
       "Automatische gegevensopslag gedurende 1 jaar voor analyse",
       "Dashboard met realtime verbruik, productie en piekverbruik per kwartier",
-      "Dashbaord pagina met 24u grafiek van verbuik en productie",
+      "Dashboard pagina met 24u grafiek van verbruik en productie",
       "Home Assistant Wifi integratie om via mobile app toegang te hebben tot dashboard en data"
     ],
     "techStack": [
@@ -51,9 +51,15 @@
   {
     "id": 2,
     "title": "Project 4.0",
-    "description": "CTF-challenges ontwikkelen voor Bsides Limburg 2026",
-    "longDescription": "Een volledig uitgewerkte C# backend, met een sql database  waarin alles wordt bijgehouden van gebruikers gegevens en een React frontend voor de website visueel op te bouwen.",
-    "image": "/assets/project-4.png",
+    "description": "Ontwikkelen van een volledig CTF-platform voor Bsides Limburg 2026 waarop deelnemers interactieve cybersecurity-challenges kunnen spelen en praktijkervaring kunnen opdoen rond hacking, beveiliging en digitale veiligheid",
+    "longDescription": "Voor Bsides Limburg 2026 werd een interactief Capture The Flag (CTF)-platform ontwikkeld met als centraal thema Friday the 13th. Het platform dompelt deelnemers onder in een horror-geïnspireerde cybersecurityomgeving waarin verschillende challenges verborgen zitten die spelers moeten analyseren en oplossen.\n\nBinnen de applicatie werden drie interactieve CTF-challenges verwerkt die volledig aansluiten bij het thema van suspense, hacking en digitale infiltratie. De bedoeling van het project was om deelnemers op een toegankelijke maar technische manier kennis te laten maken met cybersecurity en ethical hacking binnen een speelse setting.\n\nDe applicatie bestaat uit een React frontend en een ASP.NET Core backend in C#. De backend verwerkt alle API-communicatie, challengevalidatie en gebruikersinteracties, terwijl de frontend zorgt voor een moderne en interactieve gebruikerservaring.\n\nTijdens de ontwikkeling werd gebruik gemaakt van REST principles om een duidelijke en schaalbare API-architectuur op te bouwen. Daarnaast werd een SQL Server database geïntegreerd voor het opslaan van fictieve data, challenge-informatie en gebruikersgegevens.\n\nOm het project eenvoudig implementeerbaar te maken op het voorziene evenementplatform, werden Dockerfiles voorzien voor zowel de frontend als backend. Hierdoor kan de volledige applicatie consistent uitgerold worden binnen verschillende omgevingen.\n\nHet project combineert frontendontwikkeling, backendontwikkeling, databankbeheer en containerisatie binnen één geïntegreerde cybersecurityervaring volledig uitgewerkt rond het Friday the 13th-thema.",
+    "image": "/assets/project-4_logo.png",
+    "gallery": [
+      "/assets/Project-4_C1F.png",
+      "/assets/Project-4_C2_1.png",
+      "/assets/Project-4_C2_2.png",
+      "/assets/Project-4_WA-1.png"
+    ],
     "tags": [
       "Docker",
       ".NET 8.0",
@@ -70,11 +76,26 @@
     "date": "Januari 2026",
     "role": "Full-Stack Developer",
     "teamSize": "Team project",
+    "specifics": [
+      "Frontend van het CTF-web applicatie ontwikkeld in React",
+      "Backendfunctionaliteiten ontwikkeld in ASP.NET Core met C#",
+      "3 thematische Friday the 13th CTF-challenges ontworpen en geïntegreerd",
+      "REST API opgebouwd voor communicatie tussen frontend en backend",
+      "SQL Server database opgezet voor fictieve data en challengegegevens",
+      "Entity Framework Core gebruikt voor databasebeheer",
+      "Dockerfiles aangemaakt voor containerisatie en deployment",
+      "Frontend en backend voorbereid voor implementatie op het evenementplatform",
+      "UI en gebruikerservaring uitgewerkt binnen het horror- en cybersecuritythema"
+    ],
     "features": [
-      "REST API gebouwd met ASP.NET Core voor om endpoints te beheren en data op te slaan in SQL Server",
-      "Volledige uitgewerkteReact frontend",
-      "Entity Framework voor database-interacties",
-      "Sponsor-koppeling per team met overzichtspagina"
+      "React frontend ontwikkeld voor het CTF-platform",
+      "ASP.NET Core backend ontwikkeld in C#",
+      "3 interactieve CTF-challenges geïntegreerd binnen de applicatie",
+      "REST API opgebouwd volgens REST principles",
+      "SQL Server database gebruikt voor fictieve data en challengegegevens",
+      "Challengevalidatie en API-communicatie geïmplementeerd",
+      "Dockerfiles voorzien voor deployment en containerisatie",
+      "Frontend en backend voorbereid voor implementatie op het voorziene platform"
     ],
     "techStack": [
       "React",
