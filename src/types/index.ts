@@ -16,6 +16,7 @@ export interface Project {
   features: string[];
   techStack: string[];
   specifics?: string[];
+  startDate?: string;
 }
 
 export interface ContactFormData {

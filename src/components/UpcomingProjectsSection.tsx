@@ -4,12 +4,7 @@ import { Project } from '../types';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
 
-interface UpcomingProject extends Project {
-    status?: string;
-    startDate?: string;
-}
-
-const UpcomingProjectsSection: React.FC<{ projects: UpcomingProject[] }> = ({ projects }) => {
+const UpcomingProjectsSection: React.FC<{ projects: Project[] }> = ({ projects }) => {
     const { language } = useLanguage();
     const t = translations[language];
 
