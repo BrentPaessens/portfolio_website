@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Project } from '../types';
+import { Project, getProjectDescription, getProjectStatus } from '../types';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
 
@@ -43,7 +43,7 @@ const UpcomingProjectsSection: React.FC<{ projects: Project[] }> = ({ projects }
                                 </div>
                                 <div className="relative z-10 text-center">
                                     <p className="text-xs font-semibold text-orange-600 uppercase tracking-widest">
-                                        {project.status || t.upcoming.inPreparation}
+                                        {getProjectStatus(project, language as 'nl' | 'en') || t.upcoming.inPreparation}
                                     </p>
                                 </div>
                             </div>
@@ -55,7 +55,7 @@ const UpcomingProjectsSection: React.FC<{ projects: Project[] }> = ({ projects }
                                         {project.title}
                                     </h3>
                                     <p className="text-sm text-gray-500 mb-4 leading-relaxed">
-                                        {project.description}
+                                        {getProjectDescription(project, language as 'nl' | 'en')}
                                     </p>
 
                                     {/* Tags */}

@@ -2,8 +2,10 @@
   {
     "id": 5,
     "title": "AI Home Chatbot",
-    "description": "Een AI-gestuurde chatbot voor thuisgebruik.",
-    "longDescription": "Een AI-gestuurde chatbot voor thuisgebruik met natuurlijke taalverwerking.",
+    "description_nl": "Een AI-gestuurde chatbot voor thuisgebruik.",
+    "description_en": "An AI-powered chatbot for home use.",
+    "longDescription_nl": "Een AI-gestuurde chatbot voor thuisgebruik met natuurlijke taalverwerking.",
+    "longDescription_en": "An AI-powered chatbot for home use with natural language processing.",
     "image": "/assets/ai-chatbot.png",
     "tags": [
       "Python",
@@ -15,11 +17,13 @@
     ],
     "link": "",
     "github": "",
-    "status": "In voorbereiding",
+    "status_nl": "In voorbereiding",
+    "status_en": "In preparation",
     "date": "Juli 2026",
     "role": "Developer",
     "teamSize": "Solo project",
-    "features": [],
+    "features_nl": [],
+    "features_en": [],
     "techStack": [
       "Python",
       "OpenAI"

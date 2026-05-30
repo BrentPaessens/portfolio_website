@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Project } from '../types';
+import { Project, getProjectDescription } from '../types';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
 
@@ -35,7 +35,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
             <div className="p-6 flex flex-col justify-between flex-1">
                 <div>
                     <h3 className="text-lg font-bold text-gray-900 mb-2">{project.title}</h3>
-                    <p className="text-sm text-gray-500 mb-4 leading-relaxed">{project.description}</p>
+                    <p className="text-sm text-gray-500 mb-4 leading-relaxed">{getProjectDescription(project, language as 'nl' | 'en')}</p>
                     <div className="flex flex-wrap gap-2">
                         {project.tags.map((tag, i) => (
                             <span

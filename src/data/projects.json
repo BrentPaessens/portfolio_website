@@ -2,8 +2,10 @@
   {
     "id": 4,
     "title": "HomeAssistant IoT project",
-    "description": "Raspberry Pi met HomeAssistant om digitale meter uit te lezen en hiervan real-time verbruik, productie en uw piek verbruik per kwartier te visualiseren.",
-    "longDescription": "Een raspberry Pi 5 met HomeAssistant geïnstalleerd en geconfigureerd om data van een digitale meter uit te lezen. De setup biedt real-time inzicht in energieverbruik, productie en piekverbruik per kwartier. Houd ook deze gegevens voor 1 jaar bij. daarna wordt dit als csv opgeslagen als jaarverslag.",
+    "description_nl": "Raspberry Pi met HomeAssistant om digitale meter uit te lezen en hiervan real-time verbruik, productie en uw piek verbruik per kwartier te visualiseren.",
+    "description_en": "Raspberry Pi with HomeAssistant to read digital meter and visualize real-time consumption, production and peak consumption per quarter.",
+    "longDescription_nl": "Een raspberry Pi 5 met HomeAssistant geïnstalleerd en geconfigureerd om data van een digitale meter uit te lezen. De setup biedt real-time inzicht in energieverbruik, productie en piekverbruik per kwartier. Houd ook deze gegevens voor 1 jaar bij. daarna wordt dit als csv opgeslagen als jaarverslag.",
+    "longDescription_en": "A Raspberry Pi 5 with HomeAssistant installed and configured to read data from a digital meter. The setup provides real-time insights into energy consumption, production and peak consumption per quarter. Data is also retained for 1 year, after which it is saved as a CSV as an annual report.",
     "image": "/assets/HomeAssistant logo.png",
     "gallery": [
       "/assets/HomeAssistant-24hr.png",
@@ -22,11 +24,12 @@
       "purple",
       "blue"
     ],
-    "status": "Afgerond",
+    "status_nl": "Afgerond",
+    "status_en": "Completed",
     "date": "Februari 2026",
     "role": "IoT Developer",
     "teamSize": "Solo project",
-    "specifics": [
+    "specifics_nl": [
       "HomeAssistant installatie en configuratie op Raspberry Pi 5",
       "DSMR integratie voor digitale meter uitlezing",
       "Custom automations en scripts voor data verwerking",
@@ -34,12 +37,27 @@
       "API configuratie voor mobiele app integratie",
       "CSV export workflow voor jaarlijkse verslaggeving"
     ],
-    "features": [
+    "specifics_en": [
+      "HomeAssistant installation and configuration on Raspberry Pi 5",
+      "DSMR integration for digital meter reading",
+      "Custom automations and scripts for data processing",
+      "Grafana dashboard design for real-time visualization",
+      "API configuration for mobile app integration",
+      "CSV export workflow for annual reporting"
+    ],
+    "features_nl": [
       "Real-time data lezen van digitale meter",
       "Automatische gegevensopslag gedurende 1 jaar voor analyse",
       "Dashboard met realtime verbruik, productie en piekverbruik per kwartier",
       "Dashboard pagina met 24u grafiek van verbruik en productie",
       "Home Assistant Wifi integratie om via mobile app toegang te hebben tot dashboard en data"
+    ],
+    "features_en": [
+      "Real-time data reading from digital meter",
+      "Automatic data storage for 1 year for analysis",
+      "Dashboard with real-time consumption, production and peak consumption per quarter",
+      "Dashboard page with 24h chart of consumption and production",
+      "Home Assistant Wifi integration for mobile app access to dashboard and data"
     ],
     "techStack": [
       "Raspberry Pi 5",
@@ -51,8 +69,10 @@
   {
     "id": 2,
     "title": "Project 4.0",
-    "description": "Ontwikkelen van een volledig CTF-platform voor Bsides Limburg 2026 waarop deelnemers interactieve cybersecurity-challenges kunnen spelen en praktijkervaring kunnen opdoen rond hacking, beveiliging en digitale veiligheid",
-    "longDescription": "Voor Bsides Limburg 2026 werd een interactief Capture The Flag (CTF)-platform ontwikkeld met als centraal thema Friday the 13th. Het platform dompelt deelnemers onder in een horror-geïnspireerde cybersecurityomgeving waarin verschillende challenges verborgen zitten die spelers moeten analyseren en oplossen.\n\nBinnen de applicatie werden drie interactieve CTF-challenges verwerkt die volledig aansluiten bij het thema van suspense, hacking en digitale infiltratie. De bedoeling van het project was om deelnemers op een toegankelijke maar technische manier kennis te laten maken met cybersecurity en ethical hacking binnen een speelse setting.\n\nDe applicatie bestaat uit een React frontend en een ASP.NET Core backend in C#. De backend verwerkt alle API-communicatie, challengevalidatie en gebruikersinteracties, terwijl de frontend zorgt voor een moderne en interactieve gebruikerservaring.\n\nTijdens de ontwikkeling werd gebruik gemaakt van REST principles om een duidelijke en schaalbare API-architectuur op te bouwen. Daarnaast werd een SQL Server database geïntegreerd voor het opslaan van fictieve data, challenge-informatie en gebruikersgegevens.\n\nOm het project eenvoudig implementeerbaar te maken op het voorziene evenementplatform, werden Dockerfiles voorzien voor zowel de frontend als backend. Hierdoor kan de volledige applicatie consistent uitgerold worden binnen verschillende omgevingen.\n\nHet project combineert frontendontwikkeling, backendontwikkeling, databankbeheer en containerisatie binnen één geïntegreerde cybersecurityervaring volledig uitgewerkt rond het Friday the 13th-thema.",
+    "description_nl": "Ontwikkelen van een volledig CTF-platform voor Bsides Limburg 2026 waarop deelnemers interactieve cybersecurity-challenges kunnen spelen en praktijkervaring kunnen opdoen rond hacking, beveiliging en digitale veiligheid",
+    "description_en": "Development of a complete CTF platform for Bsides Limburg 2026 where participants can play interactive cybersecurity challenges and gain practical experience in hacking, security and digital safety",
+    "longDescription_nl": "Voor Bsides Limburg 2026 werd een interactief Capture The Flag (CTF)-platform ontwikkeld met als centraal thema Friday the 13th. Het platform dompelt deelnemers onder in een horror-geïnspireerde cybersecurityomgeving waarin verschillende challenges verborgen zitten die spelers moeten analyseren en oplossen.\n\nBinnen de applicatie werden drie interactieve CTF-challenges verwerkt die volledig aansluiten bij het thema van suspense, hacking en digitale infiltratie. De bedoeling van het project was om deelnemers op een toegankelijke maar technische manier kennis te laten maken met cybersecurity en ethical hacking binnen een speelse setting.\n\nDe applicatie bestaat uit een React frontend en een ASP.NET Core backend in C#. De backend verwerkt alle API-communicatie, challengevalidatie en gebruikersinteracties, terwijl de frontend zorgt voor een moderne en interactieve gebruikerservaring.\n\nTijdens de ontwikkeling werd gebruik gemaakt van REST principles om een duidelijke en schaalbare API-architectuur op te bouwen. Daarnaast werd een SQL Server database geïntegreerd voor het opslaan van fictieve data, challenge-informatie en gebruikersgegevens.\n\nOm het project eenvoudig implementeerbaar te maken op het voorziene evenementplatform, werden Dockerfiles voorzien voor zowel de frontend als backend. Hierdoor kan de volledige applicatie consistent uitgerold worden binnen verschillende omgevingen.\n\nHet project combineert frontendontwikkeling, backendontwikkeling, databankbeheer en containerisatie binnen één geïntegreerde cybersecurityervaring volledig uitgewerkt rond het Friday the 13th-thema.",
+    "longDescription_en": "For Bsides Limburg 2026, an interactive Capture The Flag (CTF) platform was developed with Friday the 13th as the central theme. The platform immerses participants in a horror-inspired cybersecurity environment with various challenges that players must analyze and solve.\n\nThree interactive CTF challenges were integrated into the application that fully align with the theme of suspense, hacking and digital infiltration. The goal of the project was to introduce participants to cybersecurity and ethical hacking in an accessible but technical way within a playful setting.\n\nThe application consists of a React frontend and an ASP.NET Core backend in C#. The backend handles all API communication, challenge validation and user interactions, while the frontend provides a modern and interactive user experience.\n\nDuring development, REST principles were used to build a clear and scalable API architecture. Additionally, a SQL Server database was integrated to store fictional data, challenge information and user data.\n\nTo make the project easy to deploy on the intended event platform, Dockerfiles were provided for both the frontend and backend. This allows the entire application to be consistently rolled out across different environments.\n\nThe project combines frontend development, backend development, database management and containerization within one integrated cybersecurity experience fully developed around the Friday the 13th theme.",
     "image": "/assets/project-4_logo.png",
     "gallery": [
       "/assets/Project-4_C1F.png",
@@ -72,11 +92,12 @@
       "purple",
       "blue"
     ],
-    "status": "Afgerond",
+    "status_nl": "Afgerond",
+    "status_en": "Completed",
     "date": "Januari 2026",
     "role": "Full-Stack Developer",
     "teamSize": "Team project",
-    "specifics": [
+    "specifics_nl": [
       "Frontend van het CTF-web applicatie ontwikkeld in React",
       "Backendfunctionaliteiten ontwikkeld in ASP.NET Core met C#",
       "3 thematische Friday the 13th CTF-challenges ontworpen en geïntegreerd",
@@ -87,7 +108,18 @@
       "Frontend en backend voorbereid voor implementatie op het evenementplatform",
       "UI en gebruikerservaring uitgewerkt binnen het horror- en cybersecuritythema"
     ],
-    "features": [
+    "specifics_en": [
+      "Frontend of the CTF web application developed in React",
+      "Backend functionality developed in ASP.NET Core with C#",
+      "3 thematic Friday the 13th CTF challenges designed and integrated",
+      "REST API built for communication between frontend and backend",
+      "SQL Server database set up for fictional data and challenge information",
+      "Entity Framework Core used for database management",
+      "Dockerfiles created for containerization and deployment",
+      "Frontend and backend prepared for implementation on the event platform",
+      "UI and user experience developed within the horror and cybersecurity theme"
+    ],
+    "features_nl": [
       "React frontend ontwikkeld voor het CTF-platform",
       "ASP.NET Core backend ontwikkeld in C#",
       "3 interactieve CTF-challenges geïntegreerd binnen de applicatie",
@@ -96,6 +128,16 @@
       "Challengevalidatie en API-communicatie geïmplementeerd",
       "Dockerfiles voorzien voor deployment en containerisatie",
       "Frontend en backend voorbereid voor implementatie op het voorziene platform"
+    ],
+    "features_en": [
+      "React frontend developed for the CTF platform",
+      "ASP.NET Core backend developed in C#",
+      "3 interactive CTF challenges integrated within the application",
+      "REST API built according to REST principles",
+      "SQL Server database used for fictional data and challenge information",
+      "Challenge validation and API communication implemented",
+      "Dockerfiles provided for deployment and containerization",
+      "Frontend and backend prepared for implementation on the intended platform"
     ],
     "techStack": [
       "React",
@@ -108,8 +150,10 @@
   {
     "id": 1,
     "title": "Cloud AI - Bralma",
-    "description": "AI model development met data analyse en pattern recognition",
-    "longDescription": "Dit project onderzoekt hoe ik twee grote publieke datasets, de historische elektriciteitsvraag van het VK en de UK Housing Price Paid-dataset, kunnen omzetten in betrouwbare input voor AI-modellen.Ik bouwde een volledige machine-learning pipeline die begint bij ruwe data, en eindigt bij een voorspellend model dat in de cloud draait.Het doel was om niet alleen een goed model te bouwen, maar vooral om te tonen dat ik kritisch kan denken, patronen kan ontdekken en een werkende Cloud-AI-implementatie kan opleveren.",
+    "description_nl": "AI model development met data analyse en pattern recognition",
+    "description_en": "AI model development with data analysis and pattern recognition",
+    "longDescription_nl": "Dit project onderzoekt hoe ik twee grote publieke datasets, de historische elektriciteitsvraag van het VK en de UK Housing Price Paid-dataset, kunnen omzetten in betrouwbare input voor AI-modellen. Ik bouwde een volledige machine-learning pipeline die begint bij ruwe data, en eindigt bij een voorspellend model dat in de cloud draait. Het doel was om niet alleen een goed model te bouwen, maar vooral om te tonen dat ik kritisch kan denken, patronen kan ontdekken en een werkende Cloud-AI-implementatie kan opleveren.",
+    "longDescription_en": "This project explores how I can convert two large public datasets, the UK's historical electricity demand and the UK Housing Price Paid dataset, into reliable input for AI models. I built a complete machine-learning pipeline that starts with raw data and ends with a predictive model running in the cloud. The goal was not only to build a good model, but especially to demonstrate that I can think critically, discover patterns and deliver a working Cloud-AI implementation.",
     "image": "/assets/cloud-ai.png",
     "tags": [
       "Python",
@@ -123,16 +167,24 @@
     ],
     "link": "https://github.com/brentpaessens",
     "github": "https://github.com/brentpaessens",
-    "status": "Afgerond",
+    "status_nl": "Afgerond",
+    "status_en": "Completed",
     "date": "October 2024",
     "role": "Solo Engineer",
     "teamSize": "Solo project",
-    "features": [
+    "features_nl": [
       "Volledige datacleaning: inconsistenties in datums, ontbrekende waarden, negatieve waarden en outliers opgeschoond met meerdere technieken.",
       "EDA-visualisaties: boxplots en correlatie-analyses om trends te begrijpen.",
       "Predictiemodellen: meerdere ML-modellen getraind en vergeleken (PyCaret, AWS-model).",
       "Cloud AI deployment: model gehost in de cloud met een backend-API en een eenvoudige frontend voor voorspellingen.",
       "Automatische pipeline: model wordt opnieuw getraind bij nieuwe data via CI/CD dit is ingebouwd op het hosting platform."
+    ],
+    "features_en": [
+      "Complete data cleaning: inconsistencies in dates, missing values, negative values and outliers cleaned with multiple techniques.",
+      "EDA visualizations: boxplots and correlation analyses to understand trends.",
+      "Prediction models: multiple ML models trained and compared (PyCaret, AWS model).",
+      "Cloud AI deployment: model hosted in the cloud with a backend API and simple frontend for predictions.",
+      "Automatic pipeline: model retrains on new data via CI/CD built into the hosting platform."
     ],
     "techStack": [
       "Python",
@@ -145,8 +197,10 @@
   {
     "id": 3,
     "title": "Waste sorter - .NET Project",
-    "description": "Een app om afval detectie te doen aan de hand van image classification en MAUI gebruikt als frontend",
-    "longDescription": "Een slimme afvalsorteringsapp die gebruik maakt van image classification om afval automatisch te categoriseren. MAUI wordt gebruikt als cross-platform frontend.",
+    "description_nl": "Een app om afval detectie te doen aan de hand van image classification en MAUI gebruikt als frontend",
+    "description_en": "An app to perform waste detection using image classification and MAUI as the frontend",
+    "longDescription_nl": "Een slimme afvalsorteringsapp die gebruik maakt van image classification om afval automatisch te categoriseren. MAUI wordt gebruikt als cross-platform frontend.",
+    "longDescription_en": "A smart waste sorting app that uses image classification to automatically categorize waste. MAUI is used as a cross-platform frontend.",
     "image": "/projects/waste-sorter.png",
     "tags": [
       ".NET 8.0",
@@ -160,15 +214,22 @@
     ],
     "link": "https://github.com/brentpaessens",
     "github": "https://github.com/brentpaessens",
-    "status": "Afgerond",
+    "status_nl": "Afgerond",
+    "status_en": "Completed",
     "date": "Juni 2024",
     "role": "Full-Stack Developer",
     "teamSize": "Solo project",
-    "features": [
+    "features_nl": [
       "Image classification model getraind om afvalcategorieen te herkennen",
       "MAUI cross-platform frontend voor Android en Windows",
       "ASP.NET Core backend API voor modelinferencing",
       "Real-time feedback aan de gebruiker na foto-upload"
+    ],
+    "features_en": [
+      "Image classification model trained to recognize waste categories",
+      "MAUI cross-platform frontend for Android and Windows",
+      "ASP.NET Core backend API for model inferencing",
+      "Real-time feedback to user after photo upload"
     ],
     "techStack": [
       ".NET 8.0",
