@@ -6,7 +6,7 @@ import { translations } from '../../i18n/translations';
 import projects from '../../data/projects.json';
 
 /* ─── Custom Hook for Scroll Animation ─────────────────── */
-const useInView = (ref: React.RefObject<HTMLDivElement>) => {
+const useInView = (ref: React.RefObject<HTMLDivElement | null>) => {
     const [isInView, setIsInView] = useState(false);
 
     useEffect(() => {
