@@ -3,12 +3,13 @@
 import React from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import { translations } from '../../i18n/translations';
+import projects from '../../data/projects.json';
 
 /* ─── Data ─────────────────────────────────────────────── */
 
-const getSTATS = (t: any) => [
-    { value: '0',  label: t.aboutMe.yearsExperience },
-    { value: '9', label: t.aboutMe.projectsCompleted },
+const getSTATS = (t: any, projectCount: number) => [
+    // { value: '0',  label: t.aboutMe.yearsExperience },
+    { value: projectCount.toString(), label: t.aboutMe.projectsCompleted },
     { value: '5+',  label: t.aboutMe.technologies },
     { value: '4',   label: t.aboutMe.contributions },
 ];
@@ -40,20 +41,18 @@ const getSKILLS = (t: any) => [
     },
 ];
 
-const PASSIONS = [
+const getPASSIONS = (t: any) => [
     {
-        title: 'Mountainbiken',
+        title: t.aboutMe.mountainbikingTitle,
         icon: '🚵',
-        description:
-            'In mijn vrije tijd doe ik aan mountainbiken. Het biedt mij de perfecte balans tussen buiten zijn en kilometers later kom je thuis als herboren.',
-        tags: ['Natuur', 'Avontuur'],
+        description: t.aboutMe.mountainbikingDesc,
+        tags: [t.aboutMe.nature, t.aboutMe.adventure],
     },
     {
-        title: 'Server Administrator',
+        title: t.aboutMe.serverAdminTitle,
         icon: '🖧',
-        description:
-            'Naast programmeren ben ik ook actief als medewerker van een Minecraft server, waar ik reports behandel en onderzoek of iemand de regels overtreedt van de server. ',
-        tags: ['Minecraft', 'Server Admin'],
+        description: t.aboutMe.serverAdminDesc,
+        tags: [t.aboutMe.minecraft, t.aboutMe.serverAdmin],
     },
 ];
 
@@ -62,8 +61,10 @@ const PASSIONS = [
 export default function OverMijPage() {
     const { language } = useLanguage();
     const t = translations[language];
-    const STATS = getSTATS(t);
+    const projectCount = projects.length;
+    const STATS = getSTATS(t, projectCount);
     const SKILLS = getSKILLS(t);
+    const PASSIONS = getPASSIONS(t);
     return (
         <div>
 
@@ -106,7 +107,7 @@ export default function OverMijPage() {
                             </div>
                             <div className="text-center">
                                 <p className="font-bold text-gray-900 text-lg">Brent Paessens</p>
-                                <p className="text-sm text-gray-500">Software Developer &amp; AI Engineer</p>
+                                <p className="text-sm text-gray-500">{t.aboutMe.profileSubtitle}</p>
                             </div>
                         </div>
 
@@ -134,7 +135,7 @@ export default function OverMijPage() {
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                                         <path d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
                                     </svg>
-                                    Download CV
+                                    {t.aboutMe.downloadCV}
                                 </a>
                                 <a
                                     href="/CV.pdf"
@@ -146,17 +147,7 @@ export default function OverMijPage() {
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                                         <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
-                                    Bekijk CV
-                                </a>
-                                <a
-                                    href="/"
-                                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all border-2"
-                                    style={{ borderColor: '#FF7F65', color: '#FF7F65', background: 'transparent' }}
-                                >
-                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                                        <path d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                                    </svg>
-                                    Terug naar Portfolio
+                                    {t.aboutMe.viewCV}
                                 </a>
                             </div>
                         </div>
@@ -166,20 +157,11 @@ export default function OverMijPage() {
 
             {/* ── Mijn verhaal ────────────────────────────── */}
             <section className="max-w-6xl mx-auto px-6 py-10">
-                <h2 className="text-3xl font-extrabold text-gray-900 mb-8">Mijn verhaal</h2>
+                <h2 className="text-3xl font-extrabold text-gray-900 mb-8">{t.aboutMe.myStory}</h2>
                 <div className="grid md:grid-cols-2 gap-8 text-gray-600 text-sm leading-relaxed">
-                    <p>
-                        Als student Applicatieontwikkeling aan Thomas More Geel ben ik gefascineerd door de mogelijkheden van technologie om complexe problemen op te lossen. Mijn reis in de wereld van programmeren begon enkele jaren geleden, en sindsdien heb ik een veelzijdige developer geworden.
-                    </p>
-                    <p>
-                        Mijn expertise ligt voornamelijk in frontend development, waar ik complexe systemen ontwikkel en optimaliseer. Echter mijn interesse in machine learning en artificial intelligence. Ik heil het als een meerwaarde gezien wanneer een AI-gestuurde werkruimte.
-                    </p>
-                    <p>
-                        Naast mijn opleiding ben ik goed in staat aan persoonlijke projecten te werken. Ik houd van het zoeken naar efficiënte, schaalbare oplossingen te bouwen en nieuwe technologieën en werkwijzen.
-                    </p>
-                    <p>
-                        Naast programmeren ben ik ook actief als server administrator, waar ik leer over het beheer van servers en de infrastructuur, en ik heb een eigen homelab opgebouwd I-T-architectuur en systeemsoftware.
-                    </p>
+                    <p>{t.aboutMe.storyPart1}</p>
+                    <p>{t.aboutMe.storyPart2}</p>
+                    <p>{t.aboutMe.storyPart3}</p>
                 </div>
             </section>
 
@@ -187,9 +169,9 @@ export default function OverMijPage() {
             <section className="max-w-6xl mx-auto px-6 py-10">
                 <div className="text-center mb-10">
                     <span className="text-sm font-semibold tracking-widest uppercase" style={{ color: '#4DD9C0' }}>
-                        Expertise
+                        {t.aboutMe.expertise}
                     </span>
-                    <h2 className="text-3xl font-extrabold text-gray-900 mt-2">Technische vaardigheden</h2>
+                    <h2 className="text-3xl font-extrabold text-gray-900 mt-2">{t.aboutMe.technicalSkills}</h2>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {SKILLS.map(({ category, icon, tags, color }) => (
@@ -226,9 +208,9 @@ export default function OverMijPage() {
             <section className="max-w-6xl mx-auto px-6 py-10 pb-20">
                 <div className="text-center mb-10">
                     <span className="text-sm font-semibold tracking-widest uppercase" style={{ color: '#4DD9C0' }}>
-                        Buiten werk
+                        {t.aboutMe.outsideWork}
                     </span>
-                    <h2 className="text-3xl font-extrabold text-gray-900 mt-2">Mijn passies</h2>
+                    <h2 className="text-3xl font-extrabold text-gray-900 mt-2">{t.aboutMe.myPassions}</h2>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {PASSIONS.map(({ title, icon, description, tags }) => (
