@@ -97,7 +97,12 @@ const ProjectCard: React.FC<{ project: Project; currentPage?: number }> = ({ pro
     );
 };
 
-export const ProjectGrid: React.FC<{ projects: Project[] }> = ({ projects }) => {
+
+
+
+
+
+const ProjectGridInner: React.FC<{ projects: Project[] }> = ({ projects }) => {
     const { language } = useLanguage();
     const t = translations[language];
     const router = useRouter();
@@ -179,12 +184,12 @@ export const ProjectGrid: React.FC<{ projects: Project[] }> = ({ projects }) => 
     );
 };
 
-// export const ProjectGrid: React.FC<{ projects: Project[] }> = ({ projects }) => {
-//     return (
-//         <Suspense fallback={null}>
-//             <ProjectGridInner projects={projects} />
-//         </Suspense>
-//     );
-// };
+export const ProjectGrid: React.FC<{ projects: Project[] }> = ({ projects }) => {
+    return (
+        <Suspense fallback={null}>
+            <ProjectGridInner projects={projects} />
+        </Suspense>
+    );
+};
 
 export default ProjectCard;
