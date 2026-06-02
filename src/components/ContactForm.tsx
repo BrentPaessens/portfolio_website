@@ -1,6 +1,12 @@
+'use client';
+
 import React, { useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../i18n/translations';
 
 const ContactForm: React.FC = () => {
+    const { language } = useLanguage();
+    const t = translations[language];
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -14,13 +20,13 @@ const ContactForm: React.FC = () => {
 
     return (
         <div className="max-w-md mx-auto p-4">
-            <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
+            <h2 className="text-2xl font-bold mb-4">{t.contact.title}</h2>
             {submitted ? (
-                <p className="text-green-500">Thank you for your message!</p>
+                <p className="text-green-500">{language === 'nl' ? 'Bedankt voor je bericht!' : 'Thank you for your message!'}</p>
             ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
-                        <label className="block text-sm font-medium text-gray-700">Name</label>
+                        <label className="block text-sm font-medium text-gray-700">{language === 'nl' ? 'Naam' : 'Name'}</label>
                         <input
                             type="text"
                             value={name}
@@ -30,7 +36,7 @@ const ContactForm: React.FC = () => {
                         />
                     </div>
                     <div>
-                        <label className="block text-sm font-medium text-gray-700">Email</label>
+                        <label className="block text-sm font-medium text-gray-700">{t.contact.email}</label>
                         <input
                             type="email"
                             value={email}
@@ -40,7 +46,7 @@ const ContactForm: React.FC = () => {
                         />
                     </div>
                     <div>
-                        <label className="block text-sm font-medium text-gray-700">Message</label>
+                        <label className="block text-sm font-medium text-gray-700">{language === 'nl' ? 'Bericht' : 'Message'}</label>
                         <textarea
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
@@ -52,7 +58,7 @@ const ContactForm: React.FC = () => {
                         type="submit"
                         className="w-full bg-blue-500 text-white font-bold py-2 rounded-md hover:bg-blue-600"
                     >
-                        Send Message
+                        {language === 'nl' ? 'Stuur Bericht' : 'Send Message'}
                     </button>
                 </form>
             )}

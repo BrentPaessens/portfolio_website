@@ -4,8 +4,8 @@ import React from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import { translations } from '../../i18n/translations';
 
-const PHONE = '+32 4xx xx xx xx'; // ← vervang met jouw nummer
-const PHONE_HREF = 'tel:+324xxxxxxxx'; // ← vervang met jouw nummer
+const PHONE = '+32 492 95 61 40'; 
+const PHONE_HREF = 'tel:+32492956140'; 
 
 const getContactItems = (t: any) => [
     {
@@ -44,55 +44,54 @@ const getContactItems = (t: any) => [
     },
 ];
 
-const SOCIAL_LINKS = [
-    {
-        label: 'LinkedIn',
-        description: 'Professionele updates en netwerken',
-        href: 'https://www.linkedin.com/in/brent-paessens/',
-        color: '#0A66C2',
-        icon: (
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
-                <circle cx="4" cy="4" r="2" />
-            </svg>
-        ),
-    },
-    {
-        label: 'Instagram',
-        description: 'Persoonlijke momenten en projecten',
-        href: 'https://instagram.com',
-        color: '#E1306C',
-        icon: (
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <rect x="2" y="2" width="20" height="20" rx="5" />
-                <circle cx="12" cy="12" r="4" />
-                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-            </svg>
-        ),
-    },
-    {
-        label: 'Github',
-        description: 'Open source projecten en code',
-        href: 'https://github.com/BrentPaessens',
-        color: '#24292e',
-        icon: (
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
-            </svg>
-        ),
-    },
-];
-
 export default function ContactPage() {
     const { language } = useLanguage();
     const t = translations[language];
     const CONTACT_ITEMS = getContactItems(t);
+
+    const SOCIAL_LINKS = [
+        {
+            label: 'LinkedIn',
+            description: language === 'nl' ? 'Professionele updates en netwerken' : 'Professional updates and networking',
+            href: 'https://www.linkedin.com/in/brent-paessens/',
+            color: '#0A66C2',
+            icon: (
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                    <circle cx="4" cy="4" r="2" />
+                </svg>
+            ),
+        },
+        {
+            label: 'Instagram',
+            description: language === 'nl' ? 'Persoonlijke momenten en projecten' : 'Personal moments and projects',
+            href: 'https://instagram.com',
+            color: '#E1306C',
+            icon: (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <rect x="2" y="2" width="20" height="20" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                </svg>
+            ),
+        },
+        {
+            label: 'Github',
+            description: language === 'nl' ? 'Open source projecten en code' : 'Open source projects and code',
+            href: 'https://github.com/BrentPaessens',
+            color: '#24292e',
+            icon: (
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
+            ),
+        },
+    ];
     return (
         <div>
 
             {/* ── Hero CTA banner ──────────────────────────── */}
             <section className="relative pt-32 pb-20 overflow-hidden">
-
                 {/* Animated blobs */}
                 <div
                     className="blob-rotate absolute top-8 right-[-60px] w-80 h-80 opacity-25 pointer-events-none"
@@ -108,23 +107,13 @@ export default function ContactPage() {
                 />
 
                 <div className="max-w-4xl mx-auto px-6 text-center relative">
-                    {/* Availability badge */}
-                    <span
-                        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-6"
-                        style={{ background: '#4DD9C022', color: '#2aaa94', border: '1px solid #4DD9C030' }}
-                    >
-                        <span className="w-2 h-2 rounded-full bg-[#4DD9C0] animate-pulse inline-block" />
-                        Beschikbaar voor nieuwe projecten
-                    </span>
-
                     <h1 className="text-5xl sm:text-6xl font-extrabold text-gray-900 mb-5 leading-tight">
-                        Laten we iets<br />
-                        <span style={{ color: '#4DD9C0' }}>groots bouwen</span> samen
+                        {t.contact.pageHeading}<br />
+                        <span style={{ color: '#4DD9C0' }}>{t.contact.pageHeadingHighlight}</span> {t.contact.pageHeadingEnd}
                     </h1>
 
                     <p className="text-gray-500 max-w-xl mx-auto text-lg leading-relaxed mb-10">
-                        Heb je een project idee, zoek je een developer, of wil je gewoon eens babbelen over tech?
-                        Ik reageer binnen 24 uur.
+                        {t.contact.pageSubheading}
                     </p>
 
                     <div className="flex flex-wrap items-center justify-center gap-4">
@@ -136,7 +125,7 @@ export default function ContactPage() {
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                                 <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
-                            Mail mij direct
+                            {t.contact.mailDirect}
                         </a>
                         <a
                             href="https://www.linkedin.com/in/brent-paessens/"
@@ -148,7 +137,7 @@ export default function ContactPage() {
                                 <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
                                 <circle cx="4" cy="4" r="2" />
                             </svg>
-                            Connect op LinkedIn
+                            {t.contact.connectLinkedIn}
                         </a>
                     </div>
                 </div>
@@ -162,11 +151,10 @@ export default function ContactPage() {
                     <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-8">
                         <div className="flex items-center gap-3 mb-2">
                             <span className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm" style={{ background: '#4DD9C0' }}>📬</span>
-                            <h2 className="text-xl font-bold text-gray-900">Direct contact</h2>
+                            <h2 className="text-xl font-bold text-gray-900">{t.contact.directContactTitle}</h2>
                         </div>
                         <p className="text-sm text-gray-500 leading-relaxed mb-8">
-                            Kies de manier die jou het beste uitkomt. Ik sta altijd open voor nieuwe
-                            kansen en samenwerkingen.
+                            {t.contact.directContactDesc}
                         </p>
 
                         <div className="flex flex-col gap-4">
@@ -200,11 +188,10 @@ export default function ContactPage() {
                     <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-8">
                         <div className="flex items-center gap-3 mb-2">
                             <span className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm" style={{ background: '#FF7F65' }}>🌐</span>
-                            <h2 className="text-xl font-bold text-gray-900">Volg mij online</h2>
+                            <h2 className="text-xl font-bold text-gray-900">{t.contact.followMeTitle}</h2>
                         </div>
                         <p className="text-sm text-gray-500 leading-relaxed mb-8">
-                            Blijf op de hoogte van mijn nieuwste projecten, updates en content via
-                            deze platformen.
+                            {t.contact.followMeDesc}
                         </p>
 
                         <div className="flex flex-col gap-4">
@@ -227,7 +214,7 @@ export default function ContactPage() {
                                         <p className="text-xs text-gray-400 mt-0.5">{description}</p>
                                     </div>
                                     <span className="text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: '#4DD9C0' }}>
-                                        Bekijk →
+                                        {t.contact.followLink}
                                     </span>
                                 </a>
                             ))}
