@@ -260,7 +260,6 @@ export default function OverMijPage() {
                     <p>{t.aboutMe.storyPart1}</p>
                     <p>{t.aboutMe.storyPart2}</p>
                     <p>{t.aboutMe.storyPart3}</p>
-                    <p>{t.aboutMe.storyPart4}</p>
                 </div>
             </section>
 
