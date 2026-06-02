@@ -17,7 +17,7 @@ const TAG_COLORS: Record<string, string> = {
 const PAGE_SIZE = 3;
 
 // Custom hook for scroll animation
-const useInView = (ref: React.RefObject<HTMLDivElement>) => {
+const useInView = (ref: React.RefObject<HTMLDivElement | null>) => {
     const [isInView, setIsInView] = useState(false);
 
     useEffect(() => {
