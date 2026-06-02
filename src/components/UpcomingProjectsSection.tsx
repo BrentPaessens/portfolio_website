@@ -5,7 +5,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
 
 // Custom hook for scroll animation
-const useInView = (ref: React.RefObject<HTMLDivElement>) => {
+const useInView = (ref: React.RefObject<HTMLDivElement | null>) => {
     const [isInView, setIsInView] = useState(false);
 
     useEffect(() => {
