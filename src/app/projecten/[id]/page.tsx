@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { useParams, notFound } from 'next/navigation';
+import { useParams, notFound, useSearchParams } from 'next/navigation';
 import projects from '../../../data/projects.json';
 import { Project, getProjectLongDescription, getProjectSpecifics, getProjectFeatures, getProjectStatus } from '../../../types';
 import { ImageCarousel } from '../../../components/ImageCarousel';
@@ -20,7 +20,9 @@ export default function ProjectDetailPage() {
     const { language } = useLanguage();
     const t = translations[language];
     const params = useParams();
+    const searchParams = useSearchParams();
     const id = params.id as string;
+    const page = searchParams.get('page') || '0';
     
     const project = (projects as Project[]).find((p) => p.id === Number(id));
     if (!project) notFound();
@@ -70,7 +72,7 @@ export default function ProjectDetailPage() {
             {/* ── Top bar ─────────────────────────────────── */}
             <div className="pt-24 pb-4 max-w-6xl mx-auto px-6">
                 <Link
-                    href="/#projecten"
+                    href={`/#projecten?page=${page}`}
                     className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-[#4DD9C0] transition-colors"
                 >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">

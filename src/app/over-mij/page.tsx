@@ -1,9 +1,35 @@
 'use client';
 
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import { translations } from '../../i18n/translations';
 import projects from '../../data/projects.json';
+
+/* ─── Custom Hook for Scroll Animation ─────────────────── */
+const useInView = (ref: React.RefObject<HTMLDivElement>) => {
+    const [isInView, setIsInView] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsInView(entry.isIntersecting);
+            },
+            { threshold: 0.1 }
+        );
+
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => {
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
+        };
+    }, [ref]);
+
+    return isInView;
+};
 
 /* ─── Data ─────────────────────────────────────────────── */
 
@@ -55,6 +81,78 @@ const getPASSIONS = (t: any) => [
         tags: [t.aboutMe.minecraft, t.aboutMe.serverAdmin],
     },
 ];
+
+/* ─── Components ───────────────────────────────────────── */
+
+const SkillCard: React.FC<{ category: string; icon: string; tags: string[]; color: string }> = ({ category, icon, tags, color }) => {
+    const ref = useRef<HTMLDivElement>(null);
+    const isInView = useInView(ref);
+
+    return (
+        <div
+            ref={ref}
+            className={`bg-white rounded-2xl border border-gray-100 shadow-sm p-6 transition-all duration-700 transform ${
+                isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+        >
+            <div className="flex items-center gap-3 mb-4">
+                <span
+                    className="w-9 h-9 rounded-xl flex items-center justify-center text-lg"
+                    style={{ background: color + '22' }}
+                >
+                    {icon}
+                </span>
+                <h3 className="font-bold text-gray-900">{category}</h3>
+            </div>
+            <div className="flex flex-wrap gap-2">
+                {tags.map((tag) => (
+                    <span
+                        key={tag}
+                        className="text-xs font-semibold px-3 py-1 rounded-full"
+                        style={{ background: color + '22', color: color === '#4DD9C0' ? '#2aaa94' : '#d9603d' }}
+                    >
+                        {tag}
+                    </span>
+                ))}
+            </div>
+        </div>
+    );
+};
+
+const PassionCard: React.FC<{ title: string; icon: string; description: string; tags: string[] }> = ({ title, icon, description, tags }) => {
+    const ref = useRef<HTMLDivElement>(null);
+    const isInView = useInView(ref);
+
+    return (
+        <div
+            ref={ref}
+            className={`bg-white rounded-2xl border border-gray-100 shadow-sm p-6 transition-all duration-700 transform ${
+                isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+        >
+            {/* icon placeholder / image area */}
+            <div
+                className="w-full h-28 rounded-xl mb-5 flex items-center justify-center text-5xl"
+                style={{ background: '#f0fdfb' }}
+            >
+                {icon}
+            </div>
+            <h3 className="font-bold text-gray-900 mb-2">{title}</h3>
+            <p className="text-sm text-gray-500 leading-relaxed mb-4">{description}</p>
+            <div className="flex gap-2 flex-wrap">
+                {tags.map((tag) => (
+                    <span
+                        key={tag}
+                        className="text-xs font-semibold px-3 py-1 rounded-full"
+                        style={{ background: '#4DD9C022', color: '#2aaa94' }}
+                    >
+                        {tag}
+                    </span>
+                ))}
+            </div>
+        </div>
+    );
+};
 
 /* ─── Page ───────────────────────────────────────────────── */
 
@@ -162,6 +260,7 @@ export default function OverMijPage() {
                     <p>{t.aboutMe.storyPart1}</p>
                     <p>{t.aboutMe.storyPart2}</p>
                     <p>{t.aboutMe.storyPart3}</p>
+                    <p>{t.aboutMe.storyPart4}</p>
                 </div>
             </section>
 
@@ -175,31 +274,7 @@ export default function OverMijPage() {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {SKILLS.map(({ category, icon, tags, color }) => (
-                        <div
-                            key={category}
-                            className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6"
-                        >
-                            <div className="flex items-center gap-3 mb-4">
-                                <span
-                                    className="w-9 h-9 rounded-xl flex items-center justify-center text-lg"
-                                    style={{ background: color + '22' }}
-                                >
-                                    {icon}
-                                </span>
-                                <h3 className="font-bold text-gray-900">{category}</h3>
-                            </div>
-                            <div className="flex flex-wrap gap-2">
-                                {tags.map((tag) => (
-                                    <span
-                                        key={tag}
-                                        className="text-xs font-semibold px-3 py-1 rounded-full"
-                                        style={{ background: color + '22', color: color === '#4DD9C0' ? '#2aaa94' : '#d9603d' }}
-                                    >
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
+                        <SkillCard key={category} category={category} icon={icon} tags={tags} color={color} />
                     ))}
                 </div>
             </section>
@@ -214,31 +289,7 @@ export default function OverMijPage() {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {PASSIONS.map(({ title, icon, description, tags }) => (
-                        <div
-                            key={title}
-                            className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6"
-                        >
-                            {/* icon placeholder / image area */}
-                            <div
-                                className="w-full h-28 rounded-xl mb-5 flex items-center justify-center text-5xl"
-                                style={{ background: '#f0fdfb' }}
-                            >
-                                {icon}
-                            </div>
-                            <h3 className="font-bold text-gray-900 mb-2">{title}</h3>
-                            <p className="text-sm text-gray-500 leading-relaxed mb-4">{description}</p>
-                            <div className="flex gap-2 flex-wrap">
-                                {tags.map((tag) => (
-                                    <span
-                                        key={tag}
-                                        className="text-xs font-semibold px-3 py-1 rounded-full"
-                                        style={{ background: '#4DD9C022', color: '#2aaa94' }}
-                                    >
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
+                        <PassionCard key={title} title={title} icon={icon} description={description} tags={tags} />
                     ))}
                 </div>
             </section>
