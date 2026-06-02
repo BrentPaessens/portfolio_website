@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Project, getProjectDescription } from '../types';
@@ -178,5 +178,13 @@ export const ProjectGrid: React.FC<{ projects: Project[] }> = ({ projects }) => 
         </section>
     );
 };
+
+// export const ProjectGrid: React.FC<{ projects: Project[] }> = ({ projects }) => {
+//     return (
+//         <Suspense fallback={null}>
+//             <ProjectGridInner projects={projects} />
+//         </Suspense>
+//     );
+// };
 
 export default ProjectCard;
