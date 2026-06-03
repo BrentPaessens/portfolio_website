@@ -33,16 +33,12 @@
       "HomeAssistant installatie en configuratie op Raspberry Pi 5",
       "DSMR integratie voor digitale meter uitlezing",
       "Custom automations en scripts voor data verwerking",
-      "Grafana dashboards ontwerp voor real-time visualisatie",
-      "API configuratie voor mobiele app integratie",
       "CSV export workflow voor jaarlijkse verslaggeving"
     ],
     "specifics_en": [
       "HomeAssistant installation and configuration on Raspberry Pi 5",
       "DSMR integration for digital meter reading",
       "Custom automations and scripts for data processing",
-      "Grafana dashboard design for real-time visualization",
-      "API configuration for mobile app integration",
       "CSV export workflow for annual reporting"
     ],
     "features_nl": [
@@ -145,53 +141,6 @@
       ".NET 8.0",
       "Entity Framework",
       "SQL Server"
-    ]
-  },
-  {
-    "id": 1,
-    "title": "Cloud AI - Bralma",
-    "description_nl": "AI model development met data analyse en pattern recognition",
-    "description_en": "AI model development with data analysis and pattern recognition",
-    "longDescription_nl": "Dit project onderzoekt hoe ik twee grote publieke datasets, de historische elektriciteitsvraag van het VK en de UK Housing Price Paid-dataset, kunnen omzetten in betrouwbare input voor AI-modellen. Ik bouwde een volledige machine-learning pipeline die begint bij ruwe data, en eindigt bij een voorspellend model dat in de cloud draait. Het doel was om niet alleen een goed model te bouwen, maar vooral om te tonen dat ik kritisch kan denken, patronen kan ontdekken en een werkende Cloud-AI-implementatie kan opleveren.",
-    "longDescription_en": "This project explores how I can convert two large public datasets, the UK's historical electricity demand and the UK Housing Price Paid dataset, into reliable input for AI models. I built a complete machine-learning pipeline that starts with raw data and ends with a predictive model running in the cloud. The goal was not only to build a good model, but especially to demonstrate that I can think critically, discover patterns and deliver a working Cloud-AI implementation.",
-    "image": "/assets/cloud-ai.png",
-    "tags": [
-      "Python",
-      "TensorFlow",
-      "Pandas"
-    ],
-    "tagColors": [
-      "teal",
-      "coral",
-      "teal"
-    ],
-    "link": "https://github.com/brentpaessens",
-    "github": "https://github.com/brentpaessens",
-    "status_nl": "Afgerond",
-    "status_en": "Completed",
-    "date": "October 2024",
-    "role": "Solo Engineer",
-    "teamSize": "Solo project",
-    "features_nl": [
-      "Volledige datacleaning: inconsistenties in datums, ontbrekende waarden, negatieve waarden en outliers opgeschoond met meerdere technieken.",
-      "EDA-visualisaties: boxplots en correlatie-analyses om trends te begrijpen.",
-      "Predictiemodellen: meerdere ML-modellen getraind en vergeleken (PyCaret, AWS-model).",
-      "Cloud AI deployment: model gehost in de cloud met een backend-API en een eenvoudige frontend voor voorspellingen.",
-      "Automatische pipeline: model wordt opnieuw getraind bij nieuwe data via CI/CD dit is ingebouwd op het hosting platform."
-    ],
-    "features_en": [
-      "Complete data cleaning: inconsistencies in dates, missing values, negative values and outliers cleaned with multiple techniques.",
-      "EDA visualizations: boxplots and correlation analyses to understand trends.",
-      "Prediction models: multiple ML models trained and compared (PyCaret, AWS model).",
-      "Cloud AI deployment: model hosted in the cloud with a backend API and simple frontend for predictions.",
-      "Automatic pipeline: model retrains on new data via CI/CD built into the hosting platform."
-    ],
-    "techStack": [
-      "Python",
-      "TensorFlow",
-      "Pandas",
-      "Scikit-Learn",
-      "Matplotlib"
     ]
   }
 ]
