@@ -41,6 +41,37 @@ const StagePage = () => {
                         </div>
                     </div>
                 </SectionCard>
+                {/* Documents */}
+                <SectionCard icon="📄" title="Documenten">
+                    <div className="flex flex-wrap gap-4">
+                        <a href="/assets/Project_Plan.pdf" target="_blank" rel="noopener noreferrer">
+                            <button className="px-5 py-2.5 bg-[#4DD9C0] text-white font-semibold rounded-lg hover:opacity-90 transition">
+                                📄 Project Plan
+                            </button>
+                        </a>
+                        <a href="/assets/Realisatiedocument.pdf" target="_blank" rel="noopener noreferrer">
+                            <button className="px-5 py-2.5 bg-[#4DD9C0] text-white font-semibold rounded-lg hover:opacity-90 transition">
+                                📄 Realisatie
+                            </button>
+                        </a>
+                        <a href="/assets/Reflectie.pdf" target="_blank" rel="noopener noreferrer">
+                            <button className="px-5 py-2.5 bg-[#4DD9C0] text-white font-semibold rounded-lg hover:opacity-90 transition">
+                                📄 Reflectie
+                            </button>
+                        </a>
+                    </div>
+                </SectionCard>
+
+
+
+
+
+
+
+
+
+
+
 
                 {/* The Project */}
                 <SectionCard icon="🔗" title={t.stage.projectTitle}>
@@ -133,53 +164,6 @@ const StagePage = () => {
                                 <li>{t.stage.docsLesson}</li>
                                 <li>{t.stage.teamworkLesson}</li>
                             </ul>
-                        </div>
-                    </div>
-                </SectionCard>
-
-                {/* Skills & Technologies */}
-                <SectionCard icon="🛠️" title={t.stage.skills}>
-                    <div className="space-y-4">
-                        <p className="text-gray-700">
-                            {t.stage.skillsDescription}
-                        </p>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                            <div className="bg-blue-50 p-4 rounded border border-blue-200">
-                                <h3 className="font-semibold text-blue-900 mb-2">{t.stage.backendAPIs}</h3>
-                                <ul className="text-sm text-blue-800 space-y-1">
-                                    <li>• <span className="font-semibold">Python 3.9+</span> {t.stage.pythonInDepth}</li>
-                                    <li>• <span className="font-semibold">Pydantic</span> {t.stage.dataValidation}</li>
-                                    <li>• <span className="font-semibold">Odoo API</span></li>
-                                </ul>
-                            </div>
-
-                            <div className="bg-purple-50 p-4 rounded border border-purple-200">
-                                <h3 className="font-semibold text-purple-900 mb-2">{t.stage.databases}</h3>
-                                <ul className="text-sm text-purple-800 space-y-1">
-                                    <li>• <span className="font-semibold">PostgreSQL</span> {t.stage.productionDatabase}</li>
-                                </ul>
-                            </div>
-
-                            <div className="bg-teal-50 p-4 rounded border border-teal-200">
-                                <h3 className="font-semibold text-teal-900 mb-2">{t.stage.infrastructure}</h3>
-                                <ul className="text-sm text-teal-800 space-y-1">
-                                    <li>• <span className="font-semibold">Linux / Ubuntu</span> {t.stage.serverManagement}</li>
-                                    <li>• <span className="font-semibold">Nginx</span> {t.stage.webServer}</li>
-                                    <li>• <span className="font-semibold">GitHub Actions</span> {t.stage.cicdPipelines}</li>
-                                    <li>• <span className="font-semibold">HTTPS & SSL</span> {t.stage.security}</li>
-                                </ul>
-                            </div>
-
-                            <div className="bg-orange-50 p-4 rounded border border-orange-200">
-                                <h3 className="font-semibold text-orange-900 mb-2">{t.stage.tools}</h3>
-                                <ul className="text-sm text-orange-800 space-y-1">
-                                    <li>• <span className="font-semibold">Git & GitHub</span> {t.stage.versionControl}</li>
-                                    <li>• <span className="font-semibold">Odoo</span> {t.stage.erpPlatform}</li>
-                                    <li>• <span className="font-semibold">{t.stage.ecommerce}</span> e-commerce</li>
-                                    <li>• <span className="font-semibold">Postman</span> {t.stage.apiTesting}</li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </SectionCard>
