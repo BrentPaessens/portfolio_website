@@ -62,17 +62,6 @@ const StagePage = () => {
                     </div>
                 </SectionCard>
 
-
-
-
-
-
-
-
-
-
-
-
                 {/* The Project */}
                 <SectionCard icon="🔗" title={t.stage.projectTitle}>
                     <div className="space-y-4">
@@ -164,31 +153,6 @@ const StagePage = () => {
                                 <li>{t.stage.docsLesson}</li>
                                 <li>{t.stage.teamworkLesson}</li>
                             </ul>
-                        </div>
-                    </div>
-                </SectionCard>
-
-                {/* What's Next */}
-                <SectionCard icon="🎓" title={t.stage.whatsNext}>
-                    <div className="space-y-4">
-                        <p className="text-gray-700">
-                            {t.stage.nextIntro}
-                        </p>
-
-                        <div>
-                            <h3 className="font-semibold text-gray-900 mb-2">🎯 {t.stage.nextSteps}</h3>
-                            <ul className="list-disc list-inside space-y-2 text-gray-700">
-                                <li>{t.stage.nextStep1}</li>
-                                <li>{t.stage.nextStep2}</li>
-                                <li>{t.stage.nextStep3}</li>
-                                <li>{t.stage.nextStep4}</li>
-                            </ul>
-                        </div>
-
-                        <div className="bg-gradient-to-r from-[#4DD9C0]/10 to-[#FF7F65]/10 p-4 rounded border border-[#4DD9C0]/20">
-                            <p className="text-gray-800">
-                                🙏 <span className="font-semibold">{t.stage.thanks}</span> {t.stage.thanksDesc}
-                            </p>
                         </div>
                     </div>
                 </SectionCard>
