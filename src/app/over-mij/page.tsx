@@ -200,7 +200,7 @@ export default function OverMijPage() {
                                 <img
                                     src="/profile.jpg"
                                     alt="Brent Paessens"
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover scale-125"
                                 />
                             </div>
                             <div className="text-center">
