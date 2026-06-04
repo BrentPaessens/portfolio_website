@@ -264,7 +264,6 @@ export const translations = {
             storyPart1: 'As an Application Development student at Thomas More Geel, I am fascinated by the possibilities of technology to solve complex problems. My journey in the world of programming started a few years ago, and since then I have become a versatile developer.',
             storyPart2: 'My expertise primarily lies in backend development, where I design, develop, and optimize complex systems. In addition, I have a strong interest in machine learning and artificial intelligence. I see AI as a valuable addition that can support and improve business processes and digital solutions.',
             storyPart3: 'Alongside my studies, I dedicate time to personal projects that allow me to further develop my technical skills. I enjoy building efficient and scalable solutions and continuously exploring new technologies and industry best practices.',
-            expertise: 'Expertise',
             technicalSkills: 'Technical Skills',
             outsideWork: 'Outside Work',
             myPassions: 'My Passions',
