@@ -16,6 +16,7 @@ const Header: React.FC = () => {
     const NAV_LINKS = [
         { label: t.nav.home,      href: '/' },
         { label: t.nav.about,     href: '/over-mij' },
+        { label: t.nav.projecten, href: '/#projecten' },
         { label: t.nav.stage,     href: '/stage' },
         { label: t.nav.contact,   href: '/contact' },
     ];
