@@ -9,6 +9,10 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
     title: 'Brent Paessens – Portfolio',
     description: 'Een verzameling van projecten en ervaringen uit mijn reis als developer',
+    icons: {
+        icon: '/favicon.svg',
+        shortcut: '/favicon.svg',
+    },
 };
 
 const Layout = ({ children }: { children: React.ReactNode }) => {

@@ -36,6 +36,9 @@ const Hero: React.FC = () => {
                         </h1>
                         <p className="text-lg text-gray-500 font-medium mb-2">{t.hero.subtitle}</p>
                         <p className="text-gray-400 mb-8 max-w-md">
+                            {t.hero.intro}
+                        </p>
+                        <p className="text-gray-400 mb-8 max-w-md">
                             {t.hero.description}
                         </p>
                         <div className="flex gap-4 flex-wrap">

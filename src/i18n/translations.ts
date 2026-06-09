@@ -16,6 +16,7 @@ export const translations = {
             description: 'Een verzameling van projecten en ervaringen uit mijn reis als developer',
             myWork: 'Mijn werk',
             aboutMe: 'Over mij',
+            intro: 'Ik ben Brent Paessens, student Applicatieontwikkeling aan Thomas More Geel met een passie voor backend development en AI.',
         },
         // Projects section
         projects: {
@@ -211,6 +212,7 @@ export const translations = {
             description: 'A collection of projects and experiences from my journey as a developer',
             myWork: 'My work',
             aboutMe: 'About me',
+            intro: 'I am Brent Paessens, an Application Development student at Thomas More Geel with a passion for backend development and AI.',
         },
         // Projects section
         projects: {
