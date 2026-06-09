@@ -142,5 +142,77 @@
       "Entity Framework",
       "SQL Server"
     ]
+  },
+  {
+    "id": 1,
+    "title": "WasteSorter",
+     "description_nl": "Een AI-gedreven mobiele app die afval herkent via de camera en de gebruiker vertelt in welke afvalemmer het thuishoort. Gebouwd met .NET MAUI en Azure Custom Vision.",
+    "description_en": "An AI-powered mobile app that recognises waste through the camera and tells the user which bin it belongs in. Built with .NET MAUI and Azure Custom Vision.",
+    "longDescription_nl": "WasteSorter is een groepsproject waarbij een volledige mobiele applicatie werd ontwikkeld om afval automatisch te classificeren met behulp van AI.\n\nDe app stelt de gebruiker in staat een foto te nemen of een afbeeldings-URL op te geven, waarna Azure Custom Vision het afvaltype herkent en een classificatie teruggeeft met bijbehorende betrouwbaarheidsgraad. Het resultaat geeft de gebruiker direct inzicht in hoe het afval correct gesorteerd moet worden.\n\nMijn bijdrage aan het project omvatte het trainen van het Custom Vision-model op Microsoft Azure met een gelabelde dataset van verschillende afvaltypes, alsook de volledige ontwikkeling van de .NET MAUI-applicatie. De MAUI-app verzorgt de gebruikersinterface en communiceert via HTTP met de backend-API.\n\nDe backend REST API, ontwikkeld door een medestudent in ASP.NET Core 8 met C#, verwerkt de afbeeldingsdata, roept het Azure Custom Vision-model aan en slaat de scanresultaten op in een SQLite-database via Entity Framework Core. AutoMapper wordt gebruikt voor DTO-mapping en Swagger voor API-documentatie.",
+    "longDescription_en": "WasteSorter is a group project in which a full mobile application was developed to automatically classify waste using AI.\n\nThe app allows the user to take a photo or provide an image URL, after which Azure Custom Vision recognises the waste type and returns a classification with a corresponding confidence score. The result gives the user immediate insight into how the waste should be correctly sorted.\n\nMy contribution included training the Custom Vision model on Microsoft Azure with a labelled dataset of various waste types, as well as fully developing the .NET MAUI application. The MAUI app handles the user interface and communicates with the backend API via HTTP.\n\nThe backend REST API, developed by a fellow student in ASP.NET Core 8 with C#, processes the image data, calls the Azure Custom Vision model and stores scan results in a SQLite database via Entity Framework Core. AutoMapper is used for DTO mapping and Swagger for API documentation.",
+    "image": "/assets/WasteSorter_1.png",
+    "gallery": [
+      "/assets/WasteSorter_1.png",
+      "/assets/WasteSorter_2.png",
+      "/assets/WasteSorter_3.png"
+    ],
+    "tags": [
+      ".NET MAUI",
+      "Azure AI",
+      "C#",
+      "ASP.NET Core"
+    ],
+    "tagColors": [
+      "purple",
+      "teal",
+      "blue",
+      "purple"
+    ],
+    "status_nl": "Afgerond",
+    "status_en": "Completed",
+    "date": "November 2025",
+    "role": "AI Developer & Mobile Developer",
+    "teamSize": "Team project",
+     "specifics_nl": [
+      "Azure Custom Vision-model getraind met gelabelde dataset van afvaltypes",
+      "Volledige .NET MAUI-applicatie ontwikkeld voor Android en Windows",
+      "HTTP-communicatie tussen MAUI-app en backend REST API geïmplementeerd",
+      "Afbeeldings-URL input verwerking gebouwd in de mobiele app",
+      "Classificatieresultaat met confidence score weergegeven in de UI"
+    ],
+    "specifics_en": [
+      "Azure Custom Vision model trained with labelled dataset of waste types",
+      "Full .NET MAUI application developed for Android and Windows",
+      "HTTP communication between MAUI app and backend REST API implemented",
+      "Image URL input processing built in the mobile app",
+      "Classification result with confidence score displayed in the UI"
+    ],
+     "features_nl": [
+      "Afvalherkenning via AI met Azure Custom Vision",
+      "Mobiele app voor Android en Windows via .NET MAUI",
+      "Classificatieresultaat met betrouwbaarheidspercentage",
+      "REST API backend met Swagger documentatie",
+      "SQLite-database voor opslag van scangeschiedenis",
+      "Gebruikersvalidatie via userId bij elke scan"
+    ],
+    "features_en": [
+      "Waste recognition via AI with Azure Custom Vision",
+      "Mobile app for Android and Windows via .NET MAUI",
+      "Classification result with confidence percentage",
+      "REST API backend with Swagger documentation",
+      "SQLite database for scan history storage",
+      "User validation via userId on each scan"
+    ],
+    "techStack": [
+      ".NET MAUI",
+      "C#",
+      "Azure Custom Vision",
+      "ASP.NET Core 8",
+      "Entity Framework Core",
+      "SQLite",
+      "AutoMapper",
+      "Swagger"
+    ]
   }
+
 ]
